@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:id="@+id/dialog_design_type"
+            android:paddingTop="@dimen/defaultpading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Design Type"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="@color/color_black"/>
+
+        <ImageView
+            android:id="@+id/dialog_design_image"
+            android:paddingTop="@dimen/defaultpading"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/imgthree"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/dialog_design_name"
+            android:paddingTop="@dimen/defaultpading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Design Name"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="@color/color_black"/>
+
+        <TextView
+            android:id="@+id/dialog_design_cost"
+            android:paddingTop="@dimen/defaultpading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stitching Cost"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="@color/color_black"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

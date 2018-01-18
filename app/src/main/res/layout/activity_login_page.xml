@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taggroup.www.darzeeco.UsersContent.LoginPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="75dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logoforfirst" />
+
+        <TextView
+            style="@style/textview_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="this is an auto generated text"/>
+
+
+
+        <EditText
+            android:id="@+id/userEmail"
+            style="@style/editText_style"
+            android:hint="@string/user_email"
+            android:inputType="textPhonetic"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+
+        <EditText
+            android:id="@+id/passWord"
+            style="@style/editText_style"
+            android:hint="*******"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            style="@style/button_style"
+            android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/signup"
+
+            style="@style/textview_style"
+            android:text="@string/signup" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/textview_style"
+            android:text="@string/skip_login" />
+
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+
+</RelativeLayout>

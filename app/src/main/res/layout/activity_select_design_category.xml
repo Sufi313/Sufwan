@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taggroup.www.darzeeco.CustomizeAndStanderd.SelectDesignCategory">
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/selectCategoryDesignToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+            </android.support.v7.widget.Toolbar>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/darzee_text"
+                android:gravity="center"
+                android:textSize="@dimen/buttonHeight"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/defaultTextSize"
+                />
+
+
+
+            <View
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/view_style"
+                android:layout_marginLeft="@dimen/defaultTextSize"
+                android:layout_marginRight="@dimen/defaultTextSize"
+                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="STANDERD DESIGN"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:text="Select a offer standerd design"
+                        android:textSize="30dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/standerdCtg"
+                        android:layout_width="220dp"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:background="@drawable/button_style2"
+                        android:gravity="center"
+                        android:text="STANDERD DESIGN"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defaultTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="CUSTOM DESIGN"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:text="Define your custom design"
+                        android:textSize="30dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/customeCtg"
+                        android:layout_width="250dp"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:background="@drawable/button_style2"
+                        android:gravity="center"
+                        android:text="CUSTOMIZED DESIGN"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defaultTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="MATERIAL"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:text="As per design of your material"
+                        android:textSize="30dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/materialCtg"
+                        android:layout_width="200dp"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:background="@drawable/button_style2"
+                        android:gravity="center"
+                        android:text="PER MATERIAL"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defaultTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="MEASURMENT"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:text="As per design of your measurment design"
+                        android:textSize="30dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/measureCtg"
+                        android:layout_width="210dp"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:background="@drawable/button_style2"
+                        android:gravity="center"
+                        android:text="PER MEASURMENT"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defaultTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="BRIDAL"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:text="Bridal"
+                        android:textSize="30dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bridalCtg"
+                        android:layout_width="200dp"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:background="@drawable/button_style2"
+                        android:gravity="center"
+                        android:text="BRIDAL"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defaultTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:src="@drawable/footer_banner" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/copyright"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:weightSum="1"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon1"
+                        />
+
+                    <ImageView
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon2"/>
+
+                    <ImageView
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon3"/>
+
+                    <ImageView
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taggroup.www.darzeeco.CustomizeAndStanderd.Catgories.CustomizedDesign">
+
+    <LinearLayout
+        android:id="@+id/upperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/customizedDesignToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upperLayout">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/defaultpading"
+                        android:paddingTop="@dimen/defaultpading"
+                        android:text="Select Your Customized Design"
+                        android:textColor="@color/color_black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/defaultTextSize"
+                        android:layout_marginRight="@dimen/defaultTextSize"
+                        android:background="@drawable/view_style" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:paddingTop="@dimen/defaultpading"
+                        android:text="FRONT NECK"
+                        android:textColor="@color/color_black"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/frontCustomSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:paddingTop="@dimen/defaultpading"
+                        android:text="BACK NECK"
+                        android:textColor="@color/color_black"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/backCustomSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:paddingTop="@dimen/defaultpading"
+                        android:text="DAAMAN"
+                        android:textColor="@color/color_black"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/daamanCustomSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:paddingTop="@dimen/defaultpading"
+                        android:text="SHALWAR"
+                        android:textColor="@color/color_black"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/shalwarCustomSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/defaultpading"
+                        android:paddingTop="@dimen/defaultpading"
+                        android:text="DOPATTA"
+                        android:textColor="@color/color_black"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/dopattaCustomSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/nextProccess"
+                        android:padding="@dimen/defaultpading"
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/button_style2"
+                        android:gravity="center"
+                        android:layout_gravity="right"
+                        android:text="Next"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defaultTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:src="@drawable/footer_banner" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/copyright"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingBottom="10dp"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:src="@drawable/icon1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:src="@drawable/icon2" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:src="@drawable/icon3" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:src="@drawable/icon4" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

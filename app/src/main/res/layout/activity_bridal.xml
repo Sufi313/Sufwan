@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taggroup.www.darzeeco.CustomizeAndStanderd.Catgories.Bridal">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bridalToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SELECT ITEM CATEGORY"
+            android:textSize="30dp"
+            android:textColor="@color/color_black"
+            android:paddingTop="@dimen/defaultTextSize"
+            android:paddingLeft="@dimen/defaultpading"/>
+
+        <View
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/view_style"
+            android:layout_marginLeft="@dimen/defaultTextSize"
+            android:layout_marginRight="@dimen/defaultTextSize"
+            />
+
+
+        <TextView
+            android:paddingLeft="@dimen/defaultpading"
+            android:paddingTop="@dimen/defaultTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/defaultTextSize"
+            android:text="Bridal stitching is starting from Rs 5000 and further increasing as per your requirement. For further details contact us on +92 21 34322606-07"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:src="@drawable/footer_banner" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/copyright"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:layout_weight="0.25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon1"
+                />
+
+            <ImageView
+                android:layout_weight="0.25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon2"/>
+
+            <ImageView
+                android:layout_weight="0.25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon3"/>
+
+            <ImageView
+                android:layout_weight="0.25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon4"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

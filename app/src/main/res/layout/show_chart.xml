@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/defaultpading"
+        android:paddingTop="@dimen/defaultTextSize"
+        android:text="SELECT SIZES"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/defaultTextSize"
+        android:textStyle="bold" />
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/size_chart"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taggroup.www.darzeeco.CustomerAct.CartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CART IS EMPTY:
+Please continue shopping"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:visibility="gone"
+            android:id="@+id/tvEmpty" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cart_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:id="@+id/priceLayout"
+            android:layout_below="@+id/cart_recycler"
+            android:padding="16dp"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="TOTAL PRICE"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_weight="6"
+                    android:textSize="24sp"
+                    android:hint="PRICE"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalPrice" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            style="@style/button_style"
+            android:id="@+id/button_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/priceLayout"
+            android:layout_marginBottom="16dp"
+            android:text="CHECK OUT"
+            android:onClick="paymentClick"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBarcart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

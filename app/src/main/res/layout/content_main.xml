@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.taggroup.www.darzeeco.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPagermain"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+
+                </android.support.v4.view.ViewPager>
+
+
+                <LinearLayout
+                    android:id="@+id/slideDotsmain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/orderbtn"
+                android:layout_width="250dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_style2"
+                android:gravity="center"
+                android:text="PLACE YOUR ORDER"
+                android:textColor="@color/white"
+                android:textSize="@dimen/defaultTextSize"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/about_cover_logo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Welcome To"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Darzee .CO"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/about_content"
+                        android:textColor="@color/gray"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="24dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorAccent"
+                            android:padding="10dp"
+                            android:src="@drawable/truck" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:text="FREE SHIPPING"
+                            android:textColor="@color/color_black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:text="Free shipping on all orders over
+ PKR 3000/ Karachi"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:text="Free shipping on all orders over
+ PKR 5000/ All Over Pakistan"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorAccent"
+                            android:padding="10dp"
+                            android:src="@drawable/dollar_sign" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:text="MONEY BACK"
+                            android:textColor="@color/color_black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:text="100% money back guarantee"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorAccent"
+                            android:padding="10dp"
+                            android:src="@drawable/online_support" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:text="ONLINE SUPPORT"
+                            android:textColor="@color/color_black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:text="Service support fast 24/7"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/screen_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/screen_area1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/screen_area2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/screen_area3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+
+                        android:src="@drawable/slideback" />
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/defaultTextSize"
+                android:paddingLeft="@dimen/defaultTextSize">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="FOR BULK STICHING CONTACT US"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name:" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Full Name"
+                    android:padding="@dimen/defaultTextSize"/>
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/defaultTextSize"/>
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Phone"
+                    android:inputType="textPhonetic"
+                    android:padding="@dimen/defaultTextSize"/>
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject:" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Subject"
+                    android:padding="@dimen/defaultTextSize"/>
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MEssage:" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:padding="@dimen/defaultTextSize"
+                    android:hint="MESSAGE"
+                    android:inputType="text|textMultiLine"
+                    android:paddingLeft="20dp"
+                    android:lines="8"
+                    android:minLines="6"
+                    android:gravity="top|left"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/customer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_contect"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="@string/customer_care"
+                    android:textColor="@color/color_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/term_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="35dp"
+                    android:text="@string/care_resource_text"
+                    android:textColorHighlight="@color/colorAccent"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/contect_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="35dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/linksite3"
+                    android:textColorHighlight="@color/colorAccent"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/service_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="35dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/linktosite"
+                    android:textColorHighlight="@color/colorAccent"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/privacy_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="35dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/linktosite2"
+                    android:textColorHighlight="@color/colorAccent"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customer_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="CONTECT US"
+                    android:textColor="@color/color_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/contectNo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawableLeft="@drawable/ic_phone_android"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="35dp"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/contect_mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_mail_outline"
+                    android:drawablePadding="@dimen/defaultpading"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="35dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/info_darzee_co"
+                    android:textColor="@drawable/color"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_access_time"
+                    android:drawablePadding="@dimen/defaultpading"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="35sp"
+                    android:paddingTop="10dp"
+                    android:text="@string/timing_care"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:src="@drawable/footer_banner" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/copyright"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:weightSum="1"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon1" android:contentDescription="TODO" />
+
+                    <ImageView
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon2"/>
+
+                    <ImageView
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon3"/>
+
+                    <ImageView
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

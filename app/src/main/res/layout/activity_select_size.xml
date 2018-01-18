@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taggroup.www.darzeeco.CustomizeAndStanderd.SelectSize">
+<LinearLayout
+    android:id="@+id/upperLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/selectSizeToolbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/colorPrimary">
+
+   </android.support.v7.widget.Toolbar>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/upperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/defaultTextSize"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="@dimen/defaultTextSize"
+                    android:text="YOUR EXISTING SIZES"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/defaultTextSize"
+                    android:layout_marginRight="@dimen/defaultTextSize"
+                    android:background="@drawable/view_style" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/maleImageProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/defaultTextSize"
+                    android:src="@drawable/male"
+                    android:visibility="gone"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="5dp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/femaleImageProfile"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/defaultTextSize"
+                    android:src="@drawable/female"
+                    android:visibility="gone"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="5dp" />
+
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="SUFWAN"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_sm" />
+
+
+                <TextView
+                    android:id="@+id/new_size_add"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/circle_button"
+                    android:gravity="center"
+                    android:text="ADD
+NEW
+SIZE"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/sizelist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/defaultpading"
+                    android:paddingTop="@dimen/defaultpading"
+                    android:text="SELECT SIZE TO PROCEED"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:src="@drawable/footer_banner" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/copyright"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/icon1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/icon2" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/icon3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/icon4" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBarSL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>

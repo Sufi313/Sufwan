@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taggroup.www.darzeeco.CustomizeAndStanderd.CategoryDesign">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/sd12">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/categoryDesignToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/sd12">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/testTextpagebekar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/defaultTextSize"
+                android:paddingLeft="30dp"
+                android:paddingTop="@dimen/defaultTextSize"
+                android:text="SELECT SIZE STANDERD"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/defaultTextSize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/view_style"
+                android:layout_marginLeft="@dimen/defaultTextSize"
+                android:layout_marginRight="@dimen/defaultTextSize"
+                />
+
+            <RadioGroup
+                android:id="@+id/standerdSizeGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/defaultpading"
+                android:paddingTop="@dimen/defaultTextSize">
+
+
+                <RadioButton
+                    android:id="@+id/radio_xs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/defaultpading"
+                    android:text="XS"
+                    android:textStyle="bold"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/radio_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/defaultpading"
+                    android:text="S"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/defaultpading"
+                    android:text="M"
+                    android:textStyle="bold"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/radio_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/defaultpading"
+                    android:text="L"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radio_xl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/defaultpading"
+                    android:text="XL"
+                    android:textStyle="bold"
+
+                    />
+
+                <RadioButton
+
+                    android:id="@+id/radio_xxl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/defaultpading"
+                    android:text="XXL"
+                    android:textStyle="bold" />
+
+
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/defaultTextSize"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/showChart"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:background="@drawable/button_style2"
+                    android:gravity="center"
+                    android:text="SIZE CHART"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/defaultTextSize"
+                android:paddingRight="@dimen/defaultTextSize">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/defaultTextSize"
+                android:paddingLeft="30dp"
+                android:paddingTop="@dimen/defaultpading"
+                android:text="SELECT SIZES"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/defaultTextSize"
+                android:textStyle="bold" />
+
+
+            <TextView
+                style="@style/text_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full NAme" />
+
+            <EditText
+                android:id="@+id/sizeFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_form"
+                android:hint="Full Name"
+                android:padding="@dimen/defaultTextSize"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/defaultTextSize"
+                android:paddingTop="@dimen/defaultTextSize">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="SHIRT"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shoulder:" />
+
+
+                <EditText
+                    android:id="@+id/shirtShoulder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Shoulder"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chest:" />
+
+
+                <EditText
+                    android:id="@+id/shirtChest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Chest"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waist:" />
+
+
+                <EditText
+                    android:id="@+id/shirtWaist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Waist"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arm Hole:" />
+
+
+                <EditText
+                    android:id="@+id/shirtArmHole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Arm Hole"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sleeve Length:" />
+
+
+                <EditText
+                    android:id="@+id/shirtSleevelLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Sleeve Length"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sleeve:" />
+
+
+                <EditText
+                    android:id="@+id/shirtSleeve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Sleeve"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daaman:" />
+
+
+                <EditText
+                    android:id="@+id/shirtDaaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Daaman"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Length:" />
+
+
+                <EditText
+                    android:id="@+id/shirtLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Length"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+
+                <TextView
+                    android:paddingTop="@dimen/defaultpading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="TROUSER"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waist:" />
+
+
+                <EditText
+                    android:id="@+id/trouserWaist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Waist"
+                    android:padding="@dimen/defaultTextSize" />
+
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hip:" />
+
+
+                <EditText
+                    android:id="@+id/trouserHip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Hip"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thigh:" />
+
+
+                <EditText
+                    android:id="@+id/trouserThigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Thigh"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Knee:" />
+
+
+                <EditText
+                    android:id="@+id/trouserKnee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Knee"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Length:" />
+
+
+                <EditText
+                    android:id="@+id/trouserLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Length"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opening:" />
+
+
+                <EditText
+                    android:id="@+id/trouserOpening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Opening"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize" />
+
+                <TextView
+                    style="@style/text_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inseam Length:" />
+
+
+                <EditText
+                    android:id="@+id/trouserInseamLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_form"
+                    android:hint="Inseam Length"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/defaultTextSize"/>
+
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/submitSize"
+                    android:padding="@dimen/defaultpading"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/button_style2"
+                    android:gravity="center"
+                    android:layout_gravity="right"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:src="@drawable/footer_banner" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/copyright"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="1"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_weight="0.25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon1"
+                     />
+
+                <ImageView
+                    android:layout_weight="0.25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon2"/>
+
+                <ImageView
+                    android:layout_weight="0.25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon3"/>
+
+                <ImageView
+                    android:id="@+id/next_skip_test"
+                    android:layout_weight="0.25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon4"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBarCD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,301 @@
+<resources>
+    <string name="Darzee.co">Darzee.co</string>
+    <!--Drawer texts -->
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+
+    <!--Menu item texts -->
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_cart">Cart</string>
+    <string name="action_notifications">Notifications</string>
+
+    <string name="item_1">Offers</string>
+    <string name="item_2">Electronics</string>
+    <string name="item_3">Lifestyle</string>
+    <string name="item_4">Home Appliances</string>
+    <string name="item_5">Books \u0026 More</string>
+    <string name="item_6">More</string>
+
+    <string name="my_profile">My Profile</string>
+    <string name="my_rewards">My Rewards</string>
+    <string name="my_orders">My Orders</string>
+    <string name="my_cart">My Cart</string>
+    <string name="my_wishlist">My Wishlist</string>
+    <string name="my_account">My Account</string>
+
+    <string name="help_support">Help \u0026 Support</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="terms_conditions">Terms \u0026 Conditions</string>
+    <string name="help_center">Help Center</string>
+
+    <string name="search_hint">Search for Products, Brands and More</string>
+
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="title_slide1">Connect the charger</string>
+    <string name="desc_slide1">It will start automatically when charger is connected</string>
+    <string name="title_slide2">Battery status update</string>
+    <string name="desc_slide2">It will  keep you updated on battery charging status through notification and home screen widget</string>
+    <string name="title_slide3">Alert on 100%</string>
+    <string name="desc_slide3">It will alert you when battery reaches 100%</string>
+    <string name="skip_login">Skip Login</string>
+    <string name="user_email">Phone Number</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+
+
+    <!--Strin cheese data name-->
+
+    <string name="terms_condition">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="checkin">Checkin</string>
+
+    <string name="menu_night_mode">Night mode</string>
+    <string name="menu_night_mode_system">Follow system</string>
+    <string name="menu_night_mode_day">Day (always)</string>
+    <string name="menu_night_mode_night">Night (always)</string>
+    <string name="menu_night_mode_auto">Auto</string>
+    <string name="app_name">Darzee.co</string>
+
+
+    <string name="about_content"><![CDATA[Darzee.co providing expert tailoring services at your doorstep deprived of any hassle to meet your day to day tailoring requirements. Darzee.co is Pakistan\'s first online stitching store in its own kind of service, where all your tailoring needs are fulfilled under one roof. Whatever your requirement is eastern or western, man or woman & kids. We have highly skilled and expert team of cutting and sewing masters who understands the latest trend exist in the fashion industry.\n\nWe don\'t only believe to deliver the services we believe in building long lasting relation with every single customer by delivering the quality stitching with state of the art technology]]></string>
+    <string name="care_resource_text"><![CDATA[Terms & Conditions]]></string>
+    <string name="info_darzee_co">info@darzee.co</string>
+    <string name="timing_care">8:00 - 19:00, Monday - Saturday</string>
+    <string name="contect_num">021 34322606-07</string>
+    <string name="linksite3"><a href="http://www.taggroup.co/contect">Contect Us</a></string>
+    <string name="customer_care">CUSTOMER CARE</string>
+
+
+    <string name="linktosite">
+    <a href="http://www.taggroup.co/services">Customer Service</a>
+</string>
+    <string name="linktosite2"><a href="http://www.taggroup.co">Privacy Policy</a></string>
+    <string name="title_activity_home_page">Darzee.co</string>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="copyright">� 2018 Online Darzee. All Rights Reserved.</string>
+
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+
+    </string-array>
+
+    <string-array name="country_array">
+        <item>Pakistan</item>
+
+    </string-array>
+
+    <string-array name="city_array">
+        <item>Bahawalpur</item>
+        <item>Burewala</item>
+        <item>Chiniot</item>
+        <item>Dera Ghazi Khan</item>
+        <item>Faisalabad</item>
+        <item>Gujranwala</item>
+        <item>Gujrat</item>
+        <item>Hafizabad</item>
+        <item>Hyderabad</item>
+        <item>Islamabad</item>
+        <item>Jacobabad</item>
+        <item>Jhang</item>
+        <item>Jhelum</item>
+        <item>K?moke</item>
+        <item>Karachi</item>
+        <item>Kasur</item>
+        <item>Khanewal</item>
+        <item>Kohat</item>
+        <item>lahore</item>
+        <item>Larkana</item>
+        <item>Mardan</item>
+        <item>Mingora</item>
+        <item>Mirpur Khas</item>
+        <item>Multtan</item>
+        <item>Nawabshah</item>
+        <item>Okara</item>
+        <item>Peshawar</item>
+        <item>Rahim Yar Khan</item>
+        <item>Rawalpindi</item>
+        <item>Sadiqabad</item>
+        <item>Sahiwal</item>
+        <item>Sargodha</item>
+        <item>Shekhupura</item>
+        <item>Sialkot</item>
+        <item>Sukkur</item>
+        <item>Wah Cantonment</item>
+    </string-array>
+
+
+    <string-array name="s_xs">
+
+        <item>13.5</item>
+        <item>18</item>
+        <item>19</item>
+        <item>8</item>
+        <item>20</item>
+        <item>4.25</item>
+        <item>23</item>
+        <item>34</item>
+
+    </string-array>
+
+    <string-array name="s_s">
+
+        <item>14</item>
+        <item>19</item>
+        <item>20</item>
+        <item>8.5</item>
+        <item>21</item>
+        <item>4.5</item>
+        <item>24</item>
+        <item>36</item>
+
+    </string-array>
+
+
+    <string-array name="s_m">
+
+        <item>14.5</item>
+        <item>20</item>
+        <item>21</item>
+        <item>9</item>
+        <item>22</item>
+        <item>4.75</item>
+        <item>25</item>
+        <item>38</item>
+
+    </string-array>
+
+    <string-array name="s_l">
+
+        <item>15</item>
+        <item>21</item>
+        <item>22</item>
+        <item>9.5</item>
+        <item>23</item>
+        <item>5</item>
+        <item>26</item>
+        <item>39</item>
+
+    </string-array>
+
+    <string-array name="s_xl">
+
+        <item>15.5</item>
+        <item>22</item>
+        <item>23</item>
+        <item>10</item>
+        <item>24</item>
+        <item>5</item>
+        <item>27</item>
+        <item>40</item>
+
+    </string-array>
+
+    <string-array name="s_xxl">
+
+        <item>16</item>
+        <item>23</item>
+        <item>24</item>
+        <item>10.5</item>
+        <item>25</item>
+        <item>5</item>
+        <item>28</item>
+        <item>41</item>
+
+    </string-array>
+
+
+    <string-array name="t_xs">
+
+        <item>12</item>
+        <item>18</item>
+        <item>9</item>
+        <item>7.5</item>
+        <item>33</item>
+        <item>5.5</item>
+        <item>28</item>
+
+    </string-array>
+
+    <string-array name="t_s">
+
+        <item>12</item>
+        <item>19</item>
+        <item>10</item>
+        <item>8</item>
+        <item>34</item>
+        <item>6.5</item>
+        <item>28</item>
+
+    </string-array>
+
+
+    <string-array name="t_m">
+
+        <item>13</item>
+        <item>20</item>
+        <item>11</item>
+        <item>8.5</item>
+        <item>35</item>
+        <item>7.5</item>
+        <item>28</item>
+
+    </string-array>
+
+    <string-array name="t_l">
+
+        <item>14</item>
+        <item>21</item>
+        <item>12</item>
+        <item>9</item>
+        <item>36</item>
+        <item>8.5</item>
+        <item>28</item>
+
+    </string-array>
+
+    <string-array name="t_xl">
+
+        <item>15</item>
+        <item>22</item>
+        <item>13</item>
+        <item>9.5</item>
+        <item>37</item>
+        <item>5</item>
+        <item>95</item>
+        <item>28</item>
+
+    </string-array>
+
+    <string-array name="t_xxl">
+
+        <item>16</item>
+        <item>23</item>
+        <item>14</item>
+        <item>10</item>
+        <item>38</item>
+        <item>10.5</item>
+        <item>28</item>
+
+    </string-array>
+
+
+    <string name="darzee_text">WELLCOME TO \n<b><i><font fgcolor="#ff0044">Darzee</font></i></b>.CO</string>
+
+    <string name="hello_worldRed"><![CDATA[<b><font color=#FF0000>Hello world!</font></b>]]></string>
+
+    <string name="welcome_text"><![CDATA[<b>Welcome,</b> to the forthetyroprogrammers blog Logged in as:]]> %1$s.</string>
+
+</resources>

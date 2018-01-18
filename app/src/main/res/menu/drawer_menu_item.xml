@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/all_products"
+            android:icon="@drawable/ic_menu"
+            android:title="Complete" />
+
+        <item
+            android:id="@+id/gents_products"
+            android:icon="@drawable/ic_man_standing_up"
+            android:title="Shirts" />
+
+        <item
+            android:id="@+id/ladies_products"
+            android:icon="@drawable/ic_woman"
+            android:title="Trousers" />
+
+        <item
+            android:id="@+id/favorite_activity"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="My Favorite" />
+
+        <item
+            android:id="@+id/cart_activity"
+            android:icon="@drawable/ic_add_shopping_cart_black_24dp"
+            android:title="My Cart" />
+
+    </group>
+
+    <item android:title="Communicate" >
+
+    <menu>
+
+        <item
+            android:id="@+id/contect_us"
+            android:icon="@drawable/ic_phone_receiver"
+            android:title="Contect Us" />
+
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/ic_about_us"
+            android:title="About Us" />
+        </menu>
+     </item>
+
+</menu>
