@@ -2,99 +2,338 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.taggroup.www.darzeeco.UsersContent.ProfileActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/profileActivityToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@+id/profileActivityToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+    <LinearLayout
+        android:background="@drawable/about_cover_logo"
+        android:paddingTop="@dimen/defaultTextSize"
+        android:id="@+id/upperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/male"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="3dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/transparent"/>
+
+        <View
+            android:paddingTop="@dimen/defaultTextSize"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/view_style"
+            android:layout_marginLeft="@dimen/defaultTextSize"
+            android:layout_marginRight="@dimen/defaultTextSize"
+            android:paddingBottom="@dimen/defaultTextSize"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/transparent"/>
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose"
+            android:background="@drawable/button_style2"
+            android:textSize="@dimen/defaultTextSize"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/transparent"/>
+        <Button
+
+            android:layout_gravity="center"
+            android:id="@+id/btnUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:background="@drawable/button_style2"
+            android:textSize="@dimen/defaultTextSize"
+           />
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/upperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Id:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+
     <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
 
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Name:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
     <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textp1"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Name:"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            />
 
     <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textp2"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
     <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textp3"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
     <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textp4"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
     <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textp5"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
     <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textp6"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Country:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
     <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textp7"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/color_black"
+            android:id="@+id/textp9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Darzee.co"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:paddingBottom="@dimen/defaultTextSize"/>
+
+
+
+        <TextView
+            android:paddingLeft="@dimen/defaultTextSize"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date Of Birth:"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
 
     <TextView
-        android:id="@+id/textp9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textp8"
-        android:text="@string/Darzee.co"
-        android:textSize="30dp"
-        android:textStyle="bold" />
-
-    <TextView
+        android:paddingLeft="@dimen/defaultTextSize"
+        android:textColor="@color/color_black"
         android:id="@+id/textp10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textp9"
         android:text="@string/Darzee.co"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/defaultTextSize"/>
+
+        <View
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/view_style"
+            android:layout_marginLeft="@dimen/defaultTextSize"
+            android:layout_marginRight="@dimen/defaultTextSize"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"/>
+
+
+    </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
 
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -104,7 +343,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-2530775083535126/6461166495">
+        ads:adUnitId="@string/banner_ad_unit_id">
 
     </com.google.android.gms.ads.AdView>
 

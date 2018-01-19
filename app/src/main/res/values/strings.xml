@@ -294,8 +294,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
     <string name="darzee_text">WELLCOME TO \n<b><i><font fgcolor="#ff0044">Darzee</font></i></b>.CO</string>
 
-    <string name="hello_worldRed"><![CDATA[<b><font color=#FF0000>Hello world!</font></b>]]></string>
-
-    <string name="welcome_text"><![CDATA[<b>Welcome,</b> to the forthetyroprogrammers blog Logged in as:]]> %1$s.</string>
+    <string name="banner_ad_unit_id">ca-app-pub-2530775083535126/9861378501</string>
 
 </resources>

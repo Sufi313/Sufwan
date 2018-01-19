@@ -64,7 +64,8 @@
         <activity android:name=".CustomerAct.FavoriteActivity" />
         <activity
             android:name=".UsersContent.ProfileActivity"
-            android:theme="@style/AppMainTheme" />
+            android:theme="@style/AppMainTheme"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".CustomizeAndStanderd.CategoryDesign"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".CustomizeAndStanderd.SelectDesignCategory"
