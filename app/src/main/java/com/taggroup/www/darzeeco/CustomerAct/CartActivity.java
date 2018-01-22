@@ -105,32 +105,23 @@ public class CartActivity extends AppCompatActivity{
             progressBar.setVisibility(View.GONE);
 
             try {
-                  //converting response to json object
-                JSONObject obj = new JSONObject(s);
-               // boolean error = obj.getBoolean("error");
+                //converting the string to json array object
+                JSONArray array = new JSONArray(s);
 
+                //traversing through all the object
+                for (int i = 0; i < array.length(); i++) {
 
-                //if no error in response
-               if (!obj.getBoolean("error")) {
-                    Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_LONG).show();
-
-                    //getting the user from the response
-
-                    JSONArray array = new JSONArray("cart");
-                    for (int i = 0; i < array.length(); i++) {
-
-                        //getting product object from json array
-                        JSONObject cart = array.getJSONObject(i);
+                    //getting product object from json array
+                    JSONObject cart = array.getJSONObject(i);
 
                         //adding the product to product list
                         cartList.add(new Cart(
                                 cart.getInt("id"),
-                                cart.getInt("quantity"),
-                                cart.getInt("size_id"),
-                                cart.getString("design_type"),
-                                cart.getString("design_id"),
-                                (float) cart.getDouble("amount"),
                                 cart.getInt("user_id"),
+                                cart.getInt("size_id"),
+                                cart.getString("design_id"),
+                                cart.getString("design_type"),
+                                (float) cart.getDouble("amount"),
                                 cart.getString("image")
                         ));
 
@@ -152,11 +143,7 @@ public class CartActivity extends AppCompatActivity{
                 priceTotal.setText(String.valueOf("Rs"+totalPrice));
                 pkr = totalPrice/pkr;
 
-                } else {
-                    TextView txt = findViewById(R.id.tvEmpty);
-                    txt.setVisibility(View.VISIBLE);
-                    Toast.makeText(getApplicationContext(), "Some error occurred", Toast.LENGTH_LONG).show();
-           }
+
             } catch (JSONException e) {
                 e.printStackTrace();
                 Toast.makeText(getApplicationContext(),""+e,Toast.LENGTH_LONG).show();

@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -64,18 +64,23 @@
         <activity android:name=".CustomerAct.FavoriteActivity" />
         <activity
             android:name=".UsersContent.ProfileActivity"
-            android:theme="@style/AppMainTheme"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".CustomizeAndStanderd.CategoryDesign"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".CustomizeAndStanderd.SelectDesignCategory"
-           android:parentActivityName=".CustomizeAndStanderd.SelectSize" />
-        <activity android:name=".CustomizeAndStanderd.SelectSize"
-            android:parentActivityName=".CustomizeAndStanderd.CategoryDesign"/>
-        <activity android:name=".CustomizeAndStanderd.Catgories.StanderdDesign"
-            android:parentActivityName=".CustomizeAndStanderd.SelectDesignCategory"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppMainTheme" />
+        <activity
+            android:name=".CustomizeAndStanderd.CategoryDesign"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CustomizeAndStanderd.SelectDesignCategory"
+            android:parentActivityName=".CustomizeAndStanderd.SelectSize" />
+        <activity
+            android:name=".CustomizeAndStanderd.SelectSize"
+            android:parentActivityName=".CustomizeAndStanderd.CategoryDesign" />
+        <activity
+            android:name=".CustomizeAndStanderd.Catgories.StanderdDesign"
+            android:parentActivityName=".CustomizeAndStanderd.SelectDesignCategory" />
         <activity android:name=".CustomizeAndStanderd.Catgories.CustomizedDesign" />
-        <activity android:name=".CustomizeAndStanderd.Catgories.Bridal"></activity>
+        <activity android:name=".CustomizeAndStanderd.Catgories.Bridal" />
+        <activity android:name=".BirdgeActivity"></activity>
     </application>
 
 </manifest>

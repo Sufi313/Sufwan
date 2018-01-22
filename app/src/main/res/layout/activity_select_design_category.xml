@@ -37,7 +37,12 @@
                 android:paddingTop="@dimen/defaultTextSize"
                 />
 
-
+            <TextView
+                android:id="@+id/checkText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="user SIZE id"
+                android:gravity="center"/>
 
             <View
                 android:layout_gravity="center"

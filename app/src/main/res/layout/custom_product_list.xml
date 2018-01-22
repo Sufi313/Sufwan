@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="@dimen/defaultpading">
+        android:paddingTop="@dimen/defaultpading">
 
         <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_margin"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -34,6 +38,17 @@
                     android:text="Custome name"
                     android:textSize="30dp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/customPrice"
+                    android:paddingBottom="@dimen/defaultpading"
+                    android:paddingLeft="@dimen/defaultpading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cost"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_black"/>
 
                 <RadioButton
                     android:id="@+id/selectButton"

@@ -54,7 +54,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 .into(holder.imageView);
 
         holder.textViewName.setText(cart.getDesign_type());
-        holder.textViewQuantity.setText(String.valueOf(cart.getQuantity()));
         holder.textViewPrice.setText("Rs:"+String.valueOf(cart.getPrice()));
         holder.textViewDesc.setText("this is dummy");
 

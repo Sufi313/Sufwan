@@ -7,7 +7,7 @@ package com.taggroup.www.darzeeco.CustomerAct;
 public class Cart {
 
     private int id;
-    private int quantity;
+
     private int size_id;
     private String design_type;
     private String design_id;
@@ -15,9 +15,8 @@ public class Cart {
     private int user_id;
     private String image;
 
-    public Cart(int id, int quantity, int size_id, String design_type, String design_id, float price,int user_id , String image) {
+    public Cart(int id, int user_id, int size_id, String design_id, String design_type, float price, String image) {
         this.id = id;
-        this.quantity = quantity;
         this.size_id = size_id;
         this.design_type = design_type;
         this.design_id = design_id;
@@ -30,9 +29,6 @@ public class Cart {
         return id;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
 
     public int getSize_id() {
         return size_id;

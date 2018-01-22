@@ -51,11 +51,11 @@ public class CategoryDesign extends AppCompatActivity {
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-//        if (SharedPrefManagerSize.getInstance(this).isLoggedIn()) {
-//            finish();
-//            startActivity(new Intent(this, SelectSize.class));
-//            return;
-//        }
+        if (SharedPrefManagerSize.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(   CategoryDesign.this, SelectSize.class));
+            return;
+        }
 
 
         // Bined all text fields
@@ -360,7 +360,7 @@ public class CategoryDesign extends AppCompatActivity {
 
                         );
 
-                        //storing the user in shared preferences
+                        //storing the user size in shared preferences
                         SharedPrefManagerSize.getInstance(getApplicationContext()).userLoginSize(sizes);
 
                         //starting the profile activity

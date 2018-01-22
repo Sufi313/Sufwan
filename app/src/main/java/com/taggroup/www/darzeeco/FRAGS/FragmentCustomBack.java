@@ -8,15 +8,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.taggroup.www.darzeeco.ProductsAndContents.Product;
-import com.taggroup.www.darzeeco.ProductsAndContents.ProductsAdapter;
+import com.taggroup.www.darzeeco.CustomizeAndStanderd.Adapters.CustomProductAdapterBack;
+import com.taggroup.www.darzeeco.CustomizeAndStanderd.Catgories.CustomProduct;
 import com.taggroup.www.darzeeco.R;
 
 import org.json.JSONArray;
@@ -26,25 +25,21 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by muhammad.sufwan on 12/14/2017.
- */
 
-public class FragmentShirts extends Fragment {
+public class FragmentCustomBack extends Fragment {
 
-    private static final String URL_PRODUCTS = "http://192.168.2.41/darzee/Api2.php?apicall=Shirts";
+    private static final String URL_PRODUCTS = "http://192.168.2.41/darzee/back_neck.php";
 
     //a list to store all the products
-    List<Product> productList;
+    List<CustomProduct> customProductsList;
 
-    //the recyclerview
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.shirts_fragment,null);
+        return inflater.inflate(R.layout.fragment_custom_back,null);
     }
 
 
@@ -53,12 +48,12 @@ public class FragmentShirts extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-
-        recyclerView = view.findViewById(R.id.recylcerView_shirts);
+        recyclerView = view.findViewById(R.id.backCustomDesign);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),
+                LinearLayoutManager.VERTICAL,false));
 
-        productList = new ArrayList<>();
+        customProductsList = new ArrayList<>();
 
         loadProducts();
 
@@ -86,21 +81,19 @@ public class FragmentShirts extends Fragment {
                             for (int i = 0; i < array.length(); i++) {
 
                                 //getting product object from json array
-                                JSONObject product = array.getJSONObject(i);
+                                JSONObject customProduct = array.getJSONObject(i);
 
                                 //adding the product to product list
-                                productList.add(new Product(
-                                        product.getInt("id"),
-                                        product.getString("title"),
-                                        product.getString("type"),
-                                        product.getString("shortdesc"),
-                                        (float) product.getDouble("price"),
-                                        product.getString("image")
+                                customProductsList.add(new CustomProduct(
+                                        customProduct.getInt("id"),
+                                        customProduct.getString("name"),
+                                        (float) customProduct.getDouble("price"),
+                                        customProduct.getString("image")
                                 ));
                             }
 
                             //creating adapter object and setting it to recyclerview
-                            ProductsAdapter adapter = new ProductsAdapter(getContext(), productList);
+                            CustomProductAdapterBack adapter = new CustomProductAdapterBack(getContext(), customProductsList);
                             recyclerView.setAdapter(adapter);
 
 
@@ -119,6 +112,7 @@ public class FragmentShirts extends Fragment {
         //adding our stringrequest to queue
         Volley.newRequestQueue(getContext()).add(stringRequest);
     }
+
 
 
 }

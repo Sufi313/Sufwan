@@ -13,10 +13,10 @@ public class StanderdProduct {
     private float amount;
     private String image;
 
-    public StanderdProduct(int id, String type, String name, String description, float amount, String image) {
+    public StanderdProduct(int id, String name, String type, String description, float amount, String image) {
         this.id = id;
-        this.type = type;
         this.name = name;
+        this.type = type;
         this.description = description;
         this.amount = amount;
         this.image = image;
@@ -26,12 +26,12 @@ public class StanderdProduct {
         return id;
     }
 
-    public String getType() {
-        return type;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public String getDescription() {

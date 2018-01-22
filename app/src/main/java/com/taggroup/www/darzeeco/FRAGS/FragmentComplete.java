@@ -91,8 +91,8 @@ public class FragmentComplete extends Fragment {
                                 productList.add(new Product(
                                         product.getInt("id"),
                                         product.getString("title"),
+                                        product.getString("type"),
                                         product.getString("shortdesc"),
-                                        product.getString("rating"),
                                         (float) product.getDouble("price"),
                                         product.getString("image")
                                 ));

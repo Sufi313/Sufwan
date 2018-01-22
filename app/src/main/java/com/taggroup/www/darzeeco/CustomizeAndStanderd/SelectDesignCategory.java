@@ -2,6 +2,8 @@ package com.taggroup.www.darzeeco.CustomizeAndStanderd;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +20,7 @@ public class SelectDesignCategory extends AppCompatActivity {
     private TextView standerdDesign, customizedDesign, perMaterial, perMeasurment, bridal;
 
     private Context context;
+    Intent intent = getIntent();
     public static final String EXTRA_ID = "size_id";
     public static final String EXTRA_SIZE_NAME = "user_size_name";
 
@@ -26,32 +29,36 @@ public class SelectDesignCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_design_category);
 
+        context = this;
+
         Toolbar myToolBar =
                 (Toolbar) findViewById(R.id.selectCategoryDesignToolbar);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final Intent intent = getIntent();
-        final int design_id = intent.getIntExtra(EXTRA_ID,0);
+        final int size_id = intent.getIntExtra(EXTRA_ID, 0);
         final String sizeName = intent.getStringExtra(EXTRA_SIZE_NAME);
 
         // Binding the text Views for select next proccess
-        standerdDesign = (TextView)findViewById(R.id.standerdCtg);
-        customizedDesign = (TextView)findViewById(R.id.customeCtg);
-        perMaterial = (TextView)findViewById(R.id.materialCtg);
-        perMeasurment = (TextView)findViewById(R.id.measureCtg);
-        bridal = (TextView)findViewById(R.id.bridalCtg);
+        standerdDesign = (TextView) findViewById(R.id.standerdCtg);
+        customizedDesign = (TextView) findViewById(R.id.customeCtg);
+        perMaterial = (TextView) findViewById(R.id.materialCtg);
+        perMeasurment = (TextView) findViewById(R.id.measureCtg);
+        bridal = (TextView) findViewById(R.id.bridalCtg);
+
+        TextView checkText = (TextView) findViewById(R.id.checkText);
+        checkText.setText("USER SIZE ID: " + String.valueOf(size_id));
 
         standerdDesign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(SelectDesignCategory.this,StanderdDesign.class);
-                startActivity(myIntent);
 
-//                Intent i = new Intent(context,StanderdDesign.class);
-//                i.putExtra("size_id",design_id);
-//                i.putExtra("user_size_name",sizeName);
-//                context.startActivity(i);
+
+                Intent i = new Intent(context, StanderdDesign.class);
+                i.putExtra("size_id", size_id);
+                i.putExtra("user_size_name", sizeName);
+                context.startActivity(i);
 
             }
         });
@@ -60,7 +67,7 @@ public class SelectDesignCategory extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent myIntent = new Intent(SelectDesignCategory.this,CustomizedDesign.class);
+                Intent myIntent = new Intent(SelectDesignCategory.this, CustomizedDesign.class);
                 startActivity(myIntent);
 
             }
@@ -83,7 +90,7 @@ public class SelectDesignCategory extends AppCompatActivity {
         bridal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent2 = new Intent(SelectDesignCategory.this,Bridal.class);
+                Intent intent2 = new Intent(SelectDesignCategory.this, Bridal.class);
                 startActivity(intent2);
             }
         });
@@ -93,4 +100,6 @@ public class SelectDesignCategory extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
     }
+
+
 }

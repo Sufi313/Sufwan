@@ -3,6 +3,8 @@ package com.taggroup.www.darzeeco.CustomizeAndStanderd.Catgories;
 import android.app.Activity;
 import android.content.Context;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,6 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import com.taggroup.www.darzeeco.BirdgeActivity;
 import com.taggroup.www.darzeeco.R;
 
 import org.json.JSONArray;
@@ -30,7 +33,8 @@ public class StanderdDesign extends AppCompatActivity {
 
 
     private Context context;
-    private Activity activity;
+
+
     public static final String EXTRA_ID = "size_id";
     public static final String EXTRA_SIZE_NAME = "user_size_name";
 
@@ -49,6 +53,13 @@ public class StanderdDesign extends AppCompatActivity {
         Toolbar myToolBar = (Toolbar) findViewById(R.id.standerdDesignToolbar);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Intent intent = getIntent();
+        int size_id = intent.getIntExtra("size_id",0);
+        String sizeName = intent.getStringExtra(EXTRA_SIZE_NAME);
+
+        Uri.parse(String.valueOf(size_id));
+        Uri.parse(sizeName);
 
         all = (TextView) findViewById(R.id.ctgAll);
         shirts = (TextView) findViewById(R.id.ctgShirts);
@@ -94,10 +105,6 @@ public class StanderdDesign extends AppCompatActivity {
 
         standerdProductsList = new ArrayList<>();
 
-//        final Intent intent = getIntent();
-//        final int design_id = intent.getIntExtra(EXTRA_ID,0);
-//        final String sizeName = intent.getStringExtra(EXTRA_SIZE_NAME);
-
 
     }
 
@@ -129,8 +136,8 @@ public class StanderdDesign extends AppCompatActivity {
                                 standerdProductsList.add(new StanderdProduct(
                                         standerdProduct.getInt("id"),
                                         standerdProduct.getString("title"),
+                                        standerdProduct.getString("type"),
                                         standerdProduct.getString("shortdesc"),
-                                        standerdProduct.getString("rating"),
                                         (float) standerdProduct.getDouble("price"),
                                         standerdProduct.getString("image")
                                 ));
@@ -139,7 +146,6 @@ public class StanderdDesign extends AppCompatActivity {
                             //creating adapter object and setting it to recyclerview
                             StanderdProductAdapter adapter = new StanderdProductAdapter(context, standerdProductsList);
                             recyclerView.setAdapter(adapter);
-                            adapter.notifyDataSetChanged();
 
 
                         } catch (JSONException e) {

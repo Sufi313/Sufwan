@@ -7,6 +7,7 @@ package com.taggroup.www.darzeeco.CustomizeAndStanderd;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +55,11 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder
             @Override
             public void onClick(View v) {
 
+                if (LetSelectSizePrefMngr.getInstance(mCtx).isSizeIn()) {
+                    LetSelectSizePrefMngr.getInstance(mCtx).ClearSize();
+                }
+
+                LetSelectSizePrefMngr.getInstance(mCtx).selectSize(sizes.getId(),sizes.getSizeName());
                 Intent i = new Intent(mCtx,SelectDesignCategory.class);
                 i.putExtra("size_id",sizes.getId());
                 i.putExtra("user_size_name",sizes.getSizeName());
