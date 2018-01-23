@@ -87,7 +87,7 @@ public class LetSelectSizePrefMngr {
 
     public float getFrontNeckPrice() {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(PREF_FRONT, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("front_neck_price", 0);
+        return sharedPreferences.getFloat("front_neck_price", 0);
     }
 
     public String getFrontNeckImage() {
@@ -129,7 +129,7 @@ public class LetSelectSizePrefMngr {
 
     public float getBackNeckPrice() {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(PREF_BACK, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("back_neck_price", 0);
+        return sharedPreferences.getFloat("back_neck_price", 0);
     }
 
     public String getBackNeckImage() {
@@ -171,7 +171,7 @@ public class LetSelectSizePrefMngr {
 
     public float getShalwarPrice() {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(PREF_SHALWAR, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("shalwar_price", 0);
+        return sharedPreferences.getFloat("shalwar_price", 0);
     }
 
     public String getShalwarImage() {
@@ -213,7 +213,7 @@ public class LetSelectSizePrefMngr {
 
     public float getDaamanPrice() {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(PREF_DAAMAN, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("daaman_price", 0);
+        return sharedPreferences.getFloat("daaman_price", 0);
     }
 
     public String getDaamanImage() {
@@ -255,7 +255,7 @@ public class LetSelectSizePrefMngr {
 
     public float getDupattaPrice() {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(PREF_DUPATTA, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("dupatta_price", 0);
+        return sharedPreferences.getFloat("dupatta_price", 0);
     }
 
     public String getDupattaImage() {

@@ -63,6 +63,7 @@
                         android:background="@drawable/view_style" />
 
                     <TextView
+                        android:id="@+id/testingOnfloatPlus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -231,5 +232,13 @@
         </android.support.v4.widget.NestedScrollView>
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
 
 </RelativeLayout>

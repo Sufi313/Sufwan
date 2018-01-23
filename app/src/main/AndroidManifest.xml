@@ -80,7 +80,8 @@
             android:parentActivityName=".CustomizeAndStanderd.SelectDesignCategory" />
         <activity android:name=".CustomizeAndStanderd.Catgories.CustomizedDesign" />
         <activity android:name=".CustomizeAndStanderd.Catgories.Bridal" />
-        <activity android:name=".BirdgeActivity"></activity>
+        <activity android:name=".BirdgeActivity" />
+        <activity android:name=".CustomizeAndStanderd.Catgories.UploadDesignCategory"></activity>
     </application>
 
 </manifest>
