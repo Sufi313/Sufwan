@@ -57,7 +57,7 @@ public class CartActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
-        Button payment = (Button)findViewById(R.id.button_payment);
+        Button payment = findViewById(R.id.button_payment);
 
 
         recyclerView = findViewById(R.id.cart_recycler);
@@ -94,7 +94,7 @@ public class CartActivity extends AppCompatActivity{
         protected void onPreExecute() {
             super.onPreExecute();
             //displaying the progress bar while user registers on the server
-            progressBar = (ProgressBar) findViewById(R.id.progressBarcart);
+            progressBar = findViewById(R.id.progressBarcart);
             progressBar.setVisibility(View.VISIBLE);
         }
 
@@ -139,14 +139,14 @@ public class CartActivity extends AppCompatActivity{
                     totalPrice += cartList.get(i).getPrice();
                 }
 
-                TextView priceTotal=(TextView)findViewById(R.id.totalPrice);
-                priceTotal.setText(String.valueOf("Rs"+totalPrice));
+                TextView priceTotal= findViewById(R.id.totalPrice);
+                priceTotal.setText(String.valueOf("Rs:"+totalPrice));
                 pkr = totalPrice/pkr;
 
 
             } catch (JSONException e) {
                 e.printStackTrace();
-                Toast.makeText(getApplicationContext(),""+e,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
             }
         }
     }

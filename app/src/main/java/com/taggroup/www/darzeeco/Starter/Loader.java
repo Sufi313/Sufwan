@@ -27,8 +27,8 @@ public class Loader extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loader);
 
-        l1 = (LinearLayout) findViewById(R.id.l1);
-        l2 = (LinearLayout) findViewById(R.id.l2);
+        l1 = findViewById(R.id.l1);
+        l2 = findViewById(R.id.l2);
         uptodown = AnimationUtils.loadAnimation(this,R.anim.uptodown);
         downtoup = AnimationUtils.loadAnimation(this,R.anim.downtoup);
         l1.setAnimation(uptodown);
@@ -36,9 +36,9 @@ public class Loader extends AppCompatActivity {
 
 
 
-        downup=(TextView)findViewById(R.id.text_downup);
-        progressbar=(ProgressBar)findViewById(R.id.progress_view);
-        updateProgressBar=(TextView)findViewById(R.id.progressinfo);
+        downup= findViewById(R.id.text_downup);
+        progressbar= findViewById(R.id.progress_view);
+        updateProgressBar= findViewById(R.id.progressinfo);
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/header_font.ttf");
         downup.setTypeface(typeface);

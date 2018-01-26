@@ -15,7 +15,7 @@ public class AboutUsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        Toolbar myToolBar= (Toolbar)findViewById(R.id.toolbar_about);
+        Toolbar myToolBar= findViewById(R.id.toolbar_about);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Darzee.CO");

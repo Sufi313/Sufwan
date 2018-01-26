@@ -74,8 +74,8 @@ public class FragmentAll extends Fragment {
         //this method will fetch and parse json
         //to display it in recyclerview
 
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
-        sliderDotsPanel = (LinearLayout) view.findViewById(R.id.slideDots);
+        viewPager = view.findViewById(R.id.viewPager);
+        sliderDotsPanel = view.findViewById(R.id.slideDots);
 
         ViewPagerAdpter viewPagerAdpter = new ViewPagerAdpter(getContext());
         viewPager.setAdapter(viewPagerAdpter);

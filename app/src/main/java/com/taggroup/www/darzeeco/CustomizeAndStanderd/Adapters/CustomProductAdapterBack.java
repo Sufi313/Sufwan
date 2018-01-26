@@ -94,10 +94,10 @@ public class CustomProductAdapterBack extends RecyclerView.Adapter<CustomProduct
         public CustomProductViewHolder(View itemView) {
             super(itemView);
 
-            customPrice = (TextView) itemView.findViewById(R.id.customPrice);
-            customImage = (ImageView) itemView.findViewById(R.id.customImage);
-            customName = (TextView) itemView.findViewById(R.id.customName);
-            selectButton = (RadioButton) itemView.findViewById(R.id.selectButton);
+            customPrice = itemView.findViewById(R.id.customPrice);
+            customImage = itemView.findViewById(R.id.customImage);
+            customName = itemView.findViewById(R.id.customName);
+            selectButton = itemView.findViewById(R.id.selectButton);
 
 
         }

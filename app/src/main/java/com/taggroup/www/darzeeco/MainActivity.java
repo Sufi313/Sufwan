@@ -44,6 +44,7 @@ import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.taggroup.www.darzeeco.CustomerAct.CartActivity;
 import com.taggroup.www.darzeeco.CustomerAct.FavoriteActivity;
 import com.taggroup.www.darzeeco.CustomizeAndStanderd.CategoryDesign;
+import com.taggroup.www.darzeeco.CustomizeAndStanderd.LetSelectSizePrefMngr;
 import com.taggroup.www.darzeeco.FRAGS.FragmentAll;
 import com.taggroup.www.darzeeco.FRAGS.FragmentComplete;
 import com.taggroup.www.darzeeco.FRAGS.FragmentShirts;
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView orderPlc =(TextView)findViewById(R.id.orderbtn);
+        TextView orderPlc = findViewById(R.id.orderbtn);
         orderPlc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,8 +104,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         sliderImg = new ArrayList<>();
 
-        viewPager = (ViewPager) findViewById(R.id.viewPagermain);
-        sliderDotspanel = (LinearLayout) findViewById(R.id.slideDotsmain);
+        viewPager = findViewById(R.id.viewPagermain);
+        sliderDotspanel = findViewById(R.id.slideDotsmain);
 
         sendRequest();
 
@@ -154,27 +155,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ft.commit();
 
 
-        Toolbar myToolBar = (Toolbar) findViewById(R.id.toolBar);
+        Toolbar myToolBar = findViewById(R.id.toolBar);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         myToolBar.setLogo(R.drawable.logo_footer);
 
-        drawer = (DrawerLayout) findViewById(R.id.activity_main);
+        drawer = findViewById(R.id.activity_main);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, myToolBar, R.string.drawer_open, R.string.drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navgation_view);
+        NavigationView navigationView = findViewById(R.id.navgation_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        TextView headname = (TextView) navigationView.getHeaderView(0).findViewById(R.id.header_name);
-        TextView heademail = (TextView) navigationView.getHeaderView(0).findViewById(R.id.header_email);
+        TextView headname = navigationView.getHeaderView(0).findViewById(R.id.header_name);
+        TextView heademail = navigationView.getHeaderView(0).findViewById(R.id.header_email);
 
         headname.setText(SharedPrefManager.getInstance(this).getUser().getLastname());
         heademail.setText(SharedPrefManager.getInstance(this).getUser().getEmail());
 
-        searchView = (MaterialSearchView) findViewById(R.id.search_view);
+        searchView = findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -201,23 +202,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        contectNo = (TextView) findViewById(R.id.contectNo_text);
-        emailText = (TextView) findViewById(R.id.contect_mail);
-        privacyText = (TextView) findViewById(R.id.privacy_text);
-        termsText = (TextView) findViewById(R.id.term_text);
-        TextView darzeetxt = (TextView) findViewById(R.id.text1);
+        contectNo = findViewById(R.id.contectNo_text);
+        emailText = findViewById(R.id.contect_mail);
+        privacyText = findViewById(R.id.privacy_text);
+        termsText = findViewById(R.id.term_text);
+        TextView darzeetxt = findViewById(R.id.text1);
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/splash.ttf");
         darzeetxt.setTypeface(typeface);
 
 
-        privacyText = (TextView) findViewById(R.id.privacy_text);
+        privacyText = findViewById(R.id.privacy_text);
         privacyText.setMovementMethod(LinkMovementMethod.getInstance());
 
-        contectText = (TextView) findViewById(R.id.contect_text);
+        contectText = findViewById(R.id.contect_text);
         contectText.setMovementMethod(LinkMovementMethod.getInstance());
 
-        serviceText = (TextView) findViewById(R.id.service_text);
+        serviceText = findViewById(R.id.service_text);
         serviceText.setMovementMethod(LinkMovementMethod.getInstance());
 
 
@@ -277,6 +278,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.action_logout:
                 SharedPrefManager.getInstance(this).logout();
+                LetSelectSizePrefMngr.getInstance(this).ClearSize();
+                LetSelectSizePrefMngr.getInstance(this).ClearSelectDupatta();
+                LetSelectSizePrefMngr.getInstance(this).ClearSelectDaaman();
+                LetSelectSizePrefMngr.getInstance(this).ClearSelectBackNeck();
+                LetSelectSizePrefMngr.getInstance(this).ClearSelectFrontNeck();
+                LetSelectSizePrefMngr.getInstance(this).ClearSelectShalwar();
                 finish();
                 startActivity(new Intent(getApplicationContext(), LoginPage.class));
                 break;
@@ -293,7 +300,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
-        drawer = (DrawerLayout) findViewById(R.id.activity_main);
+        drawer = findViewById(R.id.activity_main);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -354,7 +361,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
 
-        drawer = (DrawerLayout) findViewById(R.id.activity_main);
+        drawer = findViewById(R.id.activity_main);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

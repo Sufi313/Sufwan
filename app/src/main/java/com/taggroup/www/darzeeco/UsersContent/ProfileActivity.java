@@ -50,18 +50,18 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Toolbar toolbar = (Toolbar)findViewById(R.id.profileActivityToolbar);
+        Toolbar toolbar = findViewById(R.id.profileActivityToolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("User Profile");
 
-        mAdView = (AdView) findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        choose = (Button)findViewById(R.id.btnChoose);
-        upload = (Button)findViewById(R.id.btnUpload);
-        imageView = (ImageView)findViewById(R.id.profileImage);
+        choose = findViewById(R.id.btnChoose);
+        upload = findViewById(R.id.btnUpload);
+        imageView = findViewById(R.id.profileImage);
 
         storageReference = FirebaseStorage.getInstance().getReference();
 
@@ -87,16 +87,16 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
 
-        TextView id = (TextView)findViewById(R.id.textp1);
-        TextView fname = (TextView)findViewById(R.id.textp2);
-        TextView lname = (TextView)findViewById(R.id.textp3);
-        TextView email = (TextView)findViewById(R.id.textp4);
-        TextView phone = (TextView)findViewById(R.id.textp5);
-        TextView address = (TextView)findViewById(R.id.textp6);
-        TextView gender = (TextView)findViewById(R.id.textp7);
-        TextView country = (TextView)findViewById(R.id.textp8);
-        TextView city = (TextView)findViewById(R.id.textp9);
-        TextView dob = (TextView)findViewById(R.id.textp10);
+        TextView id = findViewById(R.id.textp1);
+        TextView fname = findViewById(R.id.textp2);
+        TextView lname = findViewById(R.id.textp3);
+        TextView email = findViewById(R.id.textp4);
+        TextView phone = findViewById(R.id.textp5);
+        TextView address = findViewById(R.id.textp6);
+        TextView gender = findViewById(R.id.textp7);
+        TextView country = findViewById(R.id.textp8);
+        TextView city = findViewById(R.id.textp9);
+        TextView dob = findViewById(R.id.textp10);
 
         id.setText(String.valueOf(SharedPrefManager.getInstance(this).getUser().getId()));
         fname.setText(SharedPrefManager.getInstance(this).getUser().getFirstname());
@@ -174,7 +174,7 @@ public class ProfileActivity extends AppCompatActivity {
     private void showFileChooser(){
         Intent intent = new Intent();
         intent.setType("image/*");
-        intent.setAction(intent.ACTION_GET_CONTENT);
+        intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select an image"), PICK_IMAGE_REQUEST);
     }
 }

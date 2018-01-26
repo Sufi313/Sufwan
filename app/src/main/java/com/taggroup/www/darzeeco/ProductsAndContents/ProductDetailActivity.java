@@ -61,17 +61,17 @@ public class ProductDetailActivity extends AppCompatActivity {
         final float productPrice = intent.getFloatExtra(EXTRA_PRICE,0);
         final String productImage = intent.getStringExtra(EXTRA_IMAGE);
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarD);
+        final Toolbar toolbar = findViewById(R.id.toolbarD);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         CollapsingToolbarLayout collapsingToolbar =
-                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+                findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle(productName);
 //        collapsingToolbar.setCollapsedTitleTextColor(getResources().getColor(R.color.color_black));
         collapsingToolbar.setExpandedTitleColor(getResources().getColor(R.color.color_black));
 
-        FloatingActionButton addtocart = (FloatingActionButton)findViewById(R.id.addcartbtn);
+        FloatingActionButton addtocart = findViewById(R.id.addcartbtn);
 
         addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,7 +104,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                     protected void onPreExecute() {
                         super.onPreExecute();
                         //displaying the progress bar while user registers on the server
-                        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+                        progressBar = findViewById(R.id.progressBar);
                         progressBar.setVisibility(View.VISIBLE);
                     }
 
@@ -148,19 +148,19 @@ public class ProductDetailActivity extends AppCompatActivity {
 
 
         final TextView name,type,description,price;
-        name = (TextView)findViewById(R.id.pro_name);
+        name = findViewById(R.id.pro_name);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/gtw.ttf");
         name.setTypeface(typeface);
-        type = (TextView)findViewById(R.id.pro_des_type);
-        description = (TextView)findViewById(R.id.pro_desc);
-        price = (TextView)findViewById(R.id.pro_price);
+        type = findViewById(R.id.pro_des_type);
+        description = findViewById(R.id.pro_desc);
+        price = findViewById(R.id.pro_price);
 
         name.setText(productName);
         type.setText(productType);
         description.setText(productShortdesc);
         price.setText("Rs:"+String.valueOf(productPrice));
 
-        final ImageView imageView = (ImageView) findViewById(R.id.backdrop);
+        final ImageView imageView = findViewById(R.id.backdrop);
         Glide.with(this)
                 .load("http://192.168.2.41/darzee/"+productImage)
                 .into(imageView);

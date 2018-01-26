@@ -14,11 +14,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.taggroup.www.darzeeco.ProductsAndContents.Product;
 import com.taggroup.www.darzeeco.ProductsAndContents.ProductDetailActivity;
 import com.taggroup.www.darzeeco.R;
+import com.taggroup.www.darzeeco.Utils.DeleteDataFromServer;
 
 import java.util.List;
 
@@ -67,8 +69,21 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder
 
             }
         });
-    }
+        holder.sizeImage.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                DeleteDataFromServer deleteDataFromServer = new DeleteDataFromServer(mCtx);
+                deleteDataFromServer.DeleteSize(String.valueOf(sizes.getId()));
+                return true;
+            }
+        });
 
+    }
+    public void delete(int position) { //removes the row
+        sizeList.remove(position);
+        notifyItemRemoved(position);
+        notifyDataSetChanged();
+    }
 
 
     @Override
@@ -84,9 +99,17 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder
         public SizeViewHolder(View itemView) {
             super(itemView);
 
+
             nameSize = itemView.findViewById(R.id.size_name);
             sizeImage = itemView.findViewById(R.id.image_size);
-
+//            sizeImage.setOnLongClickListener(new View.OnLongClickListener() {
+//                @Override
+//                public boolean onLongClick(View v) {
+//                    Toast.makeText(mCtx, "Are you show you want to delete this size", Toast.LENGTH_SHORT).show();
+//                    delete(getAdapterPosition());
+//                    return true;
+//                }
+//            });
         }
     }
 

@@ -50,13 +50,13 @@ public class BirdgeActivity extends AppCompatActivity {
 
         context = this;
 
-        TextView text = (TextView) findViewById(R.id.bridgeText);
-        TextView text1 = (TextView) findViewById(R.id.bridgeText1);
-        TextView text2 = (TextView) findViewById(R.id.bridgeText2);
-        TextView text3 = (TextView) findViewById(R.id.bridgeText3);
-        TextView text4 = (TextView) findViewById(R.id.bridgeText4);
-        TextView text5 = (TextView) findViewById(R.id.bridgeText5);
-        TextView text6 = (TextView) findViewById(R.id.bridgeText6);
+        TextView text = findViewById(R.id.bridgeText);
+        TextView text1 = findViewById(R.id.bridgeText1);
+        TextView text2 = findViewById(R.id.bridgeText2);
+        TextView text3 = findViewById(R.id.bridgeText3);
+        TextView text4 = findViewById(R.id.bridgeText4);
+        TextView text5 = findViewById(R.id.bridgeText5);
+        TextView text6 = findViewById(R.id.bridgeText6);
 
         text.setText("NAME " + designType);
         text1.setText("IMAGE " + designImage);
@@ -94,7 +94,7 @@ public class BirdgeActivity extends AppCompatActivity {
             protected void onPreExecute() {
                 super.onPreExecute();
                 //displaying the progress bar while user registers on the server
-                progressBar = (ProgressBar) findViewById(R.id.progressBarBridge);
+                progressBar = findViewById(R.id.progressBarBridge);
                 progressBar.setVisibility(View.VISIBLE);
             }
 

@@ -47,7 +47,7 @@ public class CategoryDesign extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_design);
 
-        Toolbar myToolBar = (Toolbar) findViewById(R.id.categoryDesignToolbar);
+        Toolbar myToolBar = findViewById(R.id.categoryDesignToolbar);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -60,31 +60,31 @@ public class CategoryDesign extends AppCompatActivity {
 
         // Bined all text fields
 
-        fullName = (EditText) findViewById(R.id.sizeFullName);
-        sShoulder = (EditText) findViewById(R.id.shirtShoulder);
-        sChest = (EditText) findViewById(R.id.shirtChest);
-        sWaist = (EditText) findViewById(R.id.shirtWaist);
-        sArmHolle = (EditText) findViewById(R.id.shirtArmHole);
-        sSleeveLength = (EditText) findViewById(R.id.shirtSleevelLength);
-        sSleeve = (EditText) findViewById(R.id.shirtSleeve);
-        sDaaman = (EditText) findViewById(R.id.shirtDaaman);
-        sLength = (EditText) findViewById(R.id.shirtLength);
-        tWaist = (EditText) findViewById(R.id.trouserWaist);
-        tHip = (EditText) findViewById(R.id.trouserHip);
-        tThigh = (EditText) findViewById(R.id.trouserThigh);
-        tKnee = (EditText) findViewById(R.id.trouserKnee);
-        tLength = (EditText) findViewById(R.id.trouserLength);
-        tOpening = (EditText) findViewById(R.id.trouserOpening);
-        tInseamLength = (EditText) findViewById(R.id.trouserInseamLength);
+        fullName = findViewById(R.id.sizeFullName);
+        sShoulder = findViewById(R.id.shirtShoulder);
+        sChest = findViewById(R.id.shirtChest);
+        sWaist = findViewById(R.id.shirtWaist);
+        sArmHolle = findViewById(R.id.shirtArmHole);
+        sSleeveLength = findViewById(R.id.shirtSleevelLength);
+        sSleeve = findViewById(R.id.shirtSleeve);
+        sDaaman = findViewById(R.id.shirtDaaman);
+        sLength = findViewById(R.id.shirtLength);
+        tWaist = findViewById(R.id.trouserWaist);
+        tHip = findViewById(R.id.trouserHip);
+        tThigh = findViewById(R.id.trouserThigh);
+        tKnee = findViewById(R.id.trouserKnee);
+        tLength = findViewById(R.id.trouserLength);
+        tOpening = findViewById(R.id.trouserOpening);
+        tInseamLength = findViewById(R.id.trouserInseamLength);
 
         // Bined text Button
 
-        showChart = (TextView) findViewById(R.id.showChart);
-        submit = (TextView) findViewById(R.id.submitSize);
+        showChart = findViewById(R.id.showChart);
+        submit = findViewById(R.id.submitSize);
 
 
         // testing gor check next Activity
-        testActivity = (ImageView)findViewById(R.id.next_skip_test);
+        testActivity = findViewById(R.id.next_skip_test);
 
 
         testActivity.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +106,7 @@ public class CategoryDesign extends AppCompatActivity {
         });
 
 
-        radioGroup = (RadioGroup) findViewById(R.id.standerdSizeGroup);
+        radioGroup = findViewById(R.id.standerdSizeGroup);
 
         showChart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -315,7 +315,7 @@ public class CategoryDesign extends AppCompatActivity {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                progressBar = (ProgressBar) findViewById(R.id.progressBarCD);
+                progressBar = findViewById(R.id.progressBarCD);
                 progressBar.setVisibility(View.VISIBLE);
             }
 
@@ -375,6 +375,7 @@ public class CategoryDesign extends AppCompatActivity {
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    Toast.makeText(CategoryDesign.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -397,7 +398,7 @@ public class CategoryDesign extends AppCompatActivity {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                progressBar = (ProgressBar) findViewById(R.id.progressBarCD);
+                progressBar = findViewById(R.id.progressBarCD);
                 progressBar.setVisibility(View.VISIBLE);
             }
 

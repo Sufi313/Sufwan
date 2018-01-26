@@ -15,7 +15,7 @@ public class Bridal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bridal);
 
-        Toolbar myToolBar = (Toolbar) findViewById(R.id.bridalToolbar);
+        Toolbar myToolBar = findViewById(R.id.bridalToolbar);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

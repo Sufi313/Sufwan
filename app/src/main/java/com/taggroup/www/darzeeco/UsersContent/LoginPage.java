@@ -29,7 +29,7 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
-        loginBtn=(Button)findViewById(R.id.loginBtn);
+        loginBtn= findViewById(R.id.loginBtn);
 
 
 
@@ -42,8 +42,8 @@ public class LoginPage extends AppCompatActivity {
 
 
 
-            editTextUsername = (EditText) findViewById(R.id.userEmail);
-            editTextPassword = (EditText) findViewById(R.id.passWord);
+            editTextUsername = findViewById(R.id.userEmail);
+            editTextPassword = findViewById(R.id.passWord);
 
 
             //if user presses on login
@@ -105,7 +105,7 @@ public class LoginPage extends AppCompatActivity {
                 @Override
                 protected void onPreExecute() {
                     super.onPreExecute();
-                    progressBar = (ProgressBar) findViewById(R.id.progressBar);
+                    progressBar = findViewById(R.id.progressBar);
                     progressBar.setVisibility(View.VISIBLE);
                 }
 

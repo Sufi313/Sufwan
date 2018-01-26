@@ -50,7 +50,7 @@ public class StanderdDesign extends AppCompatActivity {
 
         context = this;
 
-        Toolbar myToolBar = (Toolbar) findViewById(R.id.standerdDesignToolbar);
+        Toolbar myToolBar = findViewById(R.id.standerdDesignToolbar);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -61,10 +61,10 @@ public class StanderdDesign extends AppCompatActivity {
         Uri.parse(String.valueOf(size_id));
         Uri.parse(sizeName);
 
-        all = (TextView) findViewById(R.id.ctgAll);
-        shirts = (TextView) findViewById(R.id.ctgShirts);
-        trouser = (TextView) findViewById(R.id.ctgPaints);
-        compelete = (TextView) findViewById(R.id.ctgCompleteSuits);
+        all = findViewById(R.id.ctgAll);
+        shirts = findViewById(R.id.ctgShirts);
+        trouser = findViewById(R.id.ctgPaints);
+        compelete = findViewById(R.id.ctgCompleteSuits);
 
 
         all.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +98,7 @@ public class StanderdDesign extends AppCompatActivity {
             }
         });
 
-        recyclerView = (RecyclerView) findViewById(R.id.standerd_product_recycler);
+        recyclerView = findViewById(R.id.standerd_product_recycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()
                 , LinearLayoutManager.VERTICAL, false));

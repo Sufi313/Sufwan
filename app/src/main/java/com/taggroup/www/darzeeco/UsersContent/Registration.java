@@ -43,9 +43,9 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
 
-        gender=(Spinner)findViewById(R.id.spingender);
-        country=(Spinner)findViewById(R.id.spincountry);
-        city=(Spinner)findViewById(R.id.spincity);
+        gender= findViewById(R.id.spingender);
+        country= findViewById(R.id.spincountry);
+        city= findViewById(R.id.spincity);
 
         ArrayAdapter<CharSequence> genderAdapt = ArrayAdapter.createFromResource(this,
                 R.array.gender_array, android.R.layout.simple_spinner_item);
@@ -62,16 +62,16 @@ public class Registration extends AppCompatActivity {
         cityAdapt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         city.setAdapter(cityAdapt);
 
-        editTextAddress = (EditText)findViewById(R.id.txtaddress);
-        editTextfirstname = (EditText) findViewById(R.id.firstname);
-        editTextlastname = (EditText) findViewById(R.id.txtlname);
-        editTextEmail = (EditText) findViewById(R.id.txtemail);
-        editTextPhonenumber = (EditText) findViewById(R.id.txtphone);
-        editTextPassword = (EditText) findViewById(R.id.txtpass);
+        editTextAddress = findViewById(R.id.txtaddress);
+        editTextfirstname = findViewById(R.id.firstname);
+        editTextlastname = findViewById(R.id.txtlname);
+        editTextEmail = findViewById(R.id.txtemail);
+        editTextPhonenumber = findViewById(R.id.txtphone);
+        editTextPassword = findViewById(R.id.txtpass);
 
 
         final Calendar myCalendar = Calendar.getInstance();
-        editTextDateOfBirth = (EditText) findViewById(R.id.txtdateofbirth);
+        editTextDateOfBirth = findViewById(R.id.txtdateofbirth);
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             @Override
@@ -218,7 +218,7 @@ public class Registration extends AppCompatActivity {
             protected void onPreExecute() {
                 super.onPreExecute();
                 //displaying the progress bar while user registers on the server
-                progressBar = (ProgressBar) findViewById(R.id.progressBar);
+                progressBar = findViewById(R.id.progressBar);
                 progressBar.setVisibility(View.VISIBLE);
             }
 

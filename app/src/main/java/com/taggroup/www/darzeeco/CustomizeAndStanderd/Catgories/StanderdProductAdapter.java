@@ -99,10 +99,10 @@ public class StanderdProductAdapter extends RecyclerView.Adapter<StanderdProduct
                 dialog.setTitle("Position" + position);
                 dialog.setCancelable(true);
 
-                ImageView d_image = (ImageView) dialog.findViewById(R.id.dialog_design_image);
-                TextView d_type = (TextView) dialog.findViewById(R.id.dialog_design_type);
-                TextView d_name = (TextView) dialog.findViewById(R.id.dialog_design_name);
-                TextView d_cost = (TextView) dialog.findViewById(R.id.dialog_design_cost);
+                ImageView d_image = dialog.findViewById(R.id.dialog_design_image);
+                TextView d_type = dialog.findViewById(R.id.dialog_design_type);
+                TextView d_name = dialog.findViewById(R.id.dialog_design_name);
+                TextView d_cost = dialog.findViewById(R.id.dialog_design_cost);
 
 
                 d_type.setText(standerdProduct.getType());
@@ -142,11 +142,11 @@ public class StanderdProductAdapter extends RecyclerView.Adapter<StanderdProduct
 //            d_cost = (TextView) itemView.findViewById(R.id.dialog_design_cost);
 
 
-            designType = (TextView) itemView.findViewById(R.id.standerdTextCtg);
-            designId = (TextView) itemView.findViewById(R.id.standerd_design_id);
-            selectDesign = (TextView) itemView.findViewById(R.id.selectDesign);
-            viewDesign = (TextView) itemView.findViewById(R.id.selectDesignView);
-            showImage = (ImageView) itemView.findViewById(R.id.imageStanderd);
+            designType = itemView.findViewById(R.id.standerdTextCtg);
+            designId = itemView.findViewById(R.id.standerd_design_id);
+            selectDesign = itemView.findViewById(R.id.selectDesign);
+            viewDesign = itemView.findViewById(R.id.selectDesignView);
+            showImage = itemView.findViewById(R.id.imageStanderd);
 
 
 

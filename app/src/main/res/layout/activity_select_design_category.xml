@@ -361,6 +361,7 @@
                         android:src="@drawable/icon3"/>
 
                     <ImageView
+                        android:id="@+id/testSizeCondi"
                         android:layout_weight="0.25"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

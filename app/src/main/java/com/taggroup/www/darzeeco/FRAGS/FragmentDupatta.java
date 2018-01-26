@@ -28,6 +28,8 @@ import java.util.List;
 
 
 public class FragmentDupatta extends Fragment {
+
+
     private static final String URL_PRODUCTS = "http://192.168.2.41/darzee/dopatta.php";
 
     //a list to store all the products

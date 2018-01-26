@@ -296,7 +296,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
     <string name="banner_ad_unit_id">ca-app-pub-2530775083535126/9861378501</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="twocheckout_publish_key">E9AF60CD-6365-448A-82B2-59F9B0B7687B</string>
+
+    <string name="twocheckout_private_key">D57E5210-6637-4C35-885F-74996B7F832F</string>
 
 </resources>

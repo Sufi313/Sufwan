@@ -23,28 +23,28 @@ public class ContectUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contect_us);
 
-        Toolbar myToolBar = (Toolbar) findViewById(R.id.toolbar_contect);
+        Toolbar myToolBar = findViewById(R.id.toolbar_contect);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Darzee.CO");
         myToolBar.setSubtitle("ContectUs");
 
 
-        contectNo = (TextView)findViewById(R.id.contectNo_text);
-        emailText = (TextView) findViewById(R.id.contect_mail);
-        privacyText = (TextView) findViewById(R.id.privacy_text);
-        termsText = (TextView) findViewById(R.id.term_text);
+        contectNo = findViewById(R.id.contectNo_text);
+        emailText = findViewById(R.id.contect_mail);
+        privacyText = findViewById(R.id.privacy_text);
+        termsText = findViewById(R.id.term_text);
 
 
 
 
-        privacyText = (TextView) findViewById(R.id.privacy_text);
+        privacyText = findViewById(R.id.privacy_text);
         privacyText.setMovementMethod(LinkMovementMethod.getInstance());
 
-        contectText = (TextView) findViewById(R.id.contect_text);
+        contectText = findViewById(R.id.contect_text);
         contectText.setMovementMethod(LinkMovementMethod.getInstance());
 
-        serviceText = (TextView) findViewById(R.id.service_text);
+        serviceText = findViewById(R.id.service_text);
         serviceText.setMovementMethod(LinkMovementMethod.getInstance());
 
 

@@ -7,6 +7,7 @@ import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
@@ -20,7 +21,7 @@ public class SelectDesignCategory extends AppCompatActivity {
     private TextView standerdDesign, customizedDesign, perMaterial, perMeasurment, bridal;
 
     private Context context;
-    Intent intent = getIntent();
+
     public static final String EXTRA_ID = "size_id";
     public static final String EXTRA_SIZE_NAME = "user_size_name";
 
@@ -32,7 +33,7 @@ public class SelectDesignCategory extends AppCompatActivity {
         context = this;
 
         Toolbar myToolBar =
-                (Toolbar) findViewById(R.id.selectCategoryDesignToolbar);
+                findViewById(R.id.selectCategoryDesignToolbar);
         setSupportActionBar(myToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -40,14 +41,26 @@ public class SelectDesignCategory extends AppCompatActivity {
         final int size_id = intent.getIntExtra(EXTRA_ID, 0);
         final String sizeName = intent.getStringExtra(EXTRA_SIZE_NAME);
 
-        // Binding the text Views for select next proccess
-        standerdDesign = (TextView) findViewById(R.id.standerdCtg);
-        customizedDesign = (TextView) findViewById(R.id.customeCtg);
-        perMaterial = (TextView) findViewById(R.id.materialCtg);
-        perMeasurment = (TextView) findViewById(R.id.measureCtg);
-        bridal = (TextView) findViewById(R.id.bridalCtg);
+        if (!LetSelectSizePrefMngr.getInstance(context).isSizeIn()){
+            startActivity(new Intent(SelectDesignCategory.this, SelectSize.class));
+        }
 
-        TextView checkText = (TextView) findViewById(R.id.checkText);
+        // Binding the text Views for select next proccess
+        standerdDesign = findViewById(R.id.standerdCtg);
+        customizedDesign = findViewById(R.id.customeCtg);
+        perMaterial = findViewById(R.id.materialCtg);
+        perMeasurment = findViewById(R.id.measureCtg);
+        bridal = findViewById(R.id.bridalCtg);
+
+        ImageView testSizeCondi = findViewById(R.id.testSizeCondi);
+        testSizeCondi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LetSelectSizePrefMngr.getInstance(context).ClearSize();
+            }
+        });
+
+        TextView checkText = findViewById(R.id.checkText);
         checkText.setText("USER SIZE ID: " + String.valueOf(size_id));
 
         standerdDesign.setOnClickListener(new View.OnClickListener() {

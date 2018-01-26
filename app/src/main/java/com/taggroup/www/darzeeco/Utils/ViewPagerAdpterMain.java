@@ -52,7 +52,7 @@ public class ViewPagerAdpterMain extends PagerAdapter {
 
         SliderUtils utils = sliderImg.get(position);
 
-        ImageView imageView = (ImageView) view.findViewById(R.id.imageView2);
+        ImageView imageView = view.findViewById(R.id.imageView2);
         //imageView.setImageResource(images[position]);
 
         imageLoader = CustomeVolleyRequest.getInstance(context).getImageLoader();

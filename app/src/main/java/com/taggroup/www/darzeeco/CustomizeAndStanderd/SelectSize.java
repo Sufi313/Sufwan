@@ -47,16 +47,16 @@ public class SelectSize extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_size);
 
-        Toolbar toolBar = (Toolbar)findViewById(R.id.selectSizeToolbar);
+        Toolbar toolBar = findViewById(R.id.selectSizeToolbar);
         setSupportActionBar(toolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        image_male = (ImageView) findViewById(R.id.maleImageProfile);
-        image_female = (ImageView) findViewById(R.id.femaleImageProfile);
+        image_male = findViewById(R.id.maleImageProfile);
+        image_female = findViewById(R.id.femaleImageProfile);
 
 
-        newSizeAdd = (TextView) findViewById(R.id.new_size_add);
-        profilename = (TextView) findViewById(R.id.profile_name);
+        newSizeAdd = findViewById(R.id.new_size_add);
+        profilename = findViewById(R.id.profile_name);
 
         final String firstN = SharedPrefManager.getInstance(this).getUser().getFirstname();
         final String secondN = SharedPrefManager.getInstance(this).getUser().getLastname();
@@ -120,7 +120,7 @@ public class SelectSize extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             //displaying the progress bar while user registers on the server
-            progressBar = (ProgressBar) findViewById(R.id.progressBarSL);
+            progressBar = findViewById(R.id.progressBarSL);
             progressBar.setVisibility(View.VISIBLE);
         }
 
@@ -167,8 +167,7 @@ public class SelectSize extends AppCompatActivity {
                 SizeAdapter adapter = new SizeAdapter(getApplicationContext(), sizeList);
                 recyclerView.setAdapter(adapter);
             } catch (JSONException e) {
-                e.printStackTrace();
-                Toast.makeText(getApplicationContext(), "" + e, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),  e.getMessage(), Toast.LENGTH_LONG).show();
             }
         }
     }

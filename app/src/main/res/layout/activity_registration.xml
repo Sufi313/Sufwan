@@ -115,10 +115,10 @@
                 android:id="@+id/txtdateofbirth"
                 style="@style/editText_style"
                 android:clickable="true"
-                android:editable="false"
                 android:hint="Date Of Birth"
                 android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF" />
+                android:textColorHint="#FFFFFF"
+                android:focusable="true" />
 
             <Button
                 android:id="@+id/btnreg"
