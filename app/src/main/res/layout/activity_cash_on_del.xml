@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taggroup.www.darzeeco.CustomerAct.CashOnDel">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Give Pickup and Delivery Address"
+            android:gravity="center"
+            android:textSize="@dimen/buttonHeight"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/view_style"
+            android:layout_marginRight="@dimen/defaultpading"
+            android:layout_marginLeft="@dimen/defaultpading">
+        </View>
+
+        <TextView
+            android:paddingTop="@dimen/defaultTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="@dimen/defaultTextSize"
+            android:textColor="@color/color_black"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/defaultTextSize"/>
+
+        <EditText
+            android:id="@+id/pickupAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_form"
+            android:hint="Example: Street# 3, Park Avanue."
+            android:padding="@dimen/defaultTextSize"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <TextView
+            android:paddingTop="@dimen/defaultTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:textSize="@dimen/defaultTextSize"
+            android:textColor="@color/color_black"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/defaultTextSize"/>
+
+        <EditText
+            android:id="@+id/contactAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_form"
+            android:padding="@dimen/defaultTextSize"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+
+        <TextView
+            android:id="@+id/totalAmount"
+            android:paddingTop="@dimen/defaultTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="amount"
+            android:textSize="@dimen/defaultTextSize"
+            />
+
+        <Button
+            android:id="@+id/btnCashOnDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/button_style"
+            android:text="Can i pick?"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBarCashOnDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+
+
+</RelativeLayout>

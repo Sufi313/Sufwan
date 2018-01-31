@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/orderdate"
+        android:paddingTop="@dimen/defaultTextSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Date"
+        android:gravity="center"
+        android:textSize="@dimen/defaultTextSize"/>
+
+    <TextView
+        android:id="@+id/invoiceNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invoice Number"
+        android:gravity="center"
+        android:textSize="@dimen/defaultTextSize"/>
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Amount"
+        android:gravity="center"
+        android:textSize="@dimen/defaultTextSize"/>
+
+    <TextView
+        android:id="@+id/orderstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Status"
+        android:gravity="center"
+        android:textSize="@dimen/defaultTextSize"/>
+
+    <TextView
+        android:id="@+id/pickupstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PickUp Status"
+        android:gravity="center"
+        android:textSize="@dimen/defaultTextSize"/>
+
+    <TextView
+        android:id="@+id/deliverstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delivery Status"
+        android:gravity="center"
+        android:textSize="@dimen/defaultTextSize"/>
+
+    <TextView
+        android:id="@+id/shippingAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shipping Address"
+        android:gravity="center"
+        android:textSize="@dimen/defaultTextSize"/>
+
+    <Button
+        android:id="@+id/viewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button_style"
+        android:text="View Order"
+        android:textColor="@color/white"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/view_style"/>
+
+</LinearLayout>
