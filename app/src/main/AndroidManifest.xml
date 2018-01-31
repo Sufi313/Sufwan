@@ -50,7 +50,8 @@
             android:name=".CustomerAct.CartActivity"
             android:theme="@style/AppMainTheme" />
         <activity android:name=".CustomerAct.BuyActivity" />
-        <activity android:name=".CustomerAct.TrackActivity" />
+        <activity android:name=".CustomerAct.TrackActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Utils.AboutUsActivity"
             android:parentActivityName=".MainActivity"
@@ -81,7 +82,11 @@
         <activity android:name=".CustomizeAndStanderd.Catgories.CustomizedDesign" />
         <activity android:name=".CustomizeAndStanderd.Catgories.Bridal" />
         <activity android:name=".BirdgeActivity" />
-        <activity android:name=".CustomizeAndStanderd.Catgories.UploadDesignCategory"></activity>
+        <activity android:name=".CustomizeAndStanderd.Catgories.UploadDesignCategory" />
+        <activity
+            android:name=".CustomerAct.CartCustomActivity"
+            android:parentActivityName=".CustomizeAndStanderd.SelectSize" />
+        <activity android:name=".CustomerAct.CashOnDel"></activity>
     </application>
 
 </manifest>

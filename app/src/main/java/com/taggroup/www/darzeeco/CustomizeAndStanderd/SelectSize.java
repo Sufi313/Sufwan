@@ -1,5 +1,6 @@
 package com.taggroup.www.darzeeco.CustomizeAndStanderd;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -164,8 +165,11 @@ public class SelectSize extends AppCompatActivity {
                 }
 
                 //creating adapter object and setting it to recyclerview
+                if (sizeList == null){ startActivity(new Intent(getApplicationContext(),CategoryDesign.class)); }
                 SizeAdapter adapter = new SizeAdapter(getApplicationContext(), sizeList);
                 recyclerView.setAdapter(adapter);
+
+
             } catch (JSONException e) {
                 Toast.makeText(getApplicationContext(),  e.getMessage(), Toast.LENGTH_LONG).show();
             }

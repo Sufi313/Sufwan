@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    app:cardCornerRadius="@dimen/defaultTextSize"
+    app:cardElevation="15sp">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
 
         <TextView
             android:id="@+id/dialog_design_type"
-            android:paddingTop="@dimen/defaultpading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Design Type"
             android:gravity="center"
-            android:textSize="30dp"
-            android:textColor="@color/color_black"/>
+            android:paddingTop="@dimen/defaultpading"
+            android:text="Design Type"
+            android:textColor="@color/color_black"
+            android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/dialog_design_image"
-            android:paddingTop="@dimen/defaultpading"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:src="@drawable/imgthree"
-            android:scaleType="fitXY"/>
+            android:padding="@dimen/defaultpading"
+            android:scaleType="fitXY"
+            android:src="@drawable/imgthree" />
 
         <TextView
             android:id="@+id/dialog_design_name"
-            android:paddingTop="@dimen/defaultpading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Design Name"
             android:gravity="center"
-            android:textSize="30dp"
-            android:textColor="@color/color_black"/>
+            android:paddingTop="@dimen/defaultpading"
+            android:text="Design Name"
+            android:textColor="@color/color_black"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/dialog_design_cost"
-            android:paddingTop="@dimen/defaultpading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Stitching Cost"
             android:gravity="center"
-            android:textSize="30dp"
-            android:textColor="@color/color_black"/>
+            android:paddingTop="@dimen/defaultpading"
+            android:text="Stitching Cost"
+            android:textColor="@color/color_black"
+            android:textSize="30sp" />
 
 
     </LinearLayout>
-
-
-</RelativeLayout>
+</android.support.v7.widget.CardView>

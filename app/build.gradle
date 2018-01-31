@@ -39,16 +39,17 @@ dependencies {
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
     implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-//  implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.+'
+    implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.1'
     implementation 'com.google.firebase:firebase-messaging:11.8.0'
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-//  implementation 'com.github.amigold.fundapter:library:1.0'
-    implementation 'org.apache.httpcomponents:httpclient:4.3.5'
     implementation 'com.google.code.gson:gson:2.8.1'
-    implementation files('./2checkout-java.jar')
-
-
+    //  implementation 'com.github.amigold.fundapter:library:1.0'
+//    implementation 'org.apache.httpcomponents:httpclient:4.3.5'
+//    implementation files('./2checkout-java.jar')
 }
+
+
+
 
 
 

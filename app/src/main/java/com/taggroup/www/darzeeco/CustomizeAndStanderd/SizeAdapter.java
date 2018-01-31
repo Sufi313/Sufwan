@@ -5,9 +5,12 @@ package com.taggroup.www.darzeeco.CustomizeAndStanderd;
  */
 
 
+import android.app.Application;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,9 +31,6 @@ import java.util.List;
 public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder> {
 
 
-
-
-
     private Context mCtx;
     private List<Sizes> sizeList;
 
@@ -48,7 +48,7 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder
     }
 
     @Override
-    public void onBindViewHolder(SizeAdapter.SizeViewHolder holder, int position) {
+    public void onBindViewHolder(final SizeAdapter.SizeViewHolder holder, final int position) {
         final Sizes sizes = sizeList.get(position);
 
         //loading the image
@@ -61,10 +61,10 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder
                     LetSelectSizePrefMngr.getInstance(mCtx).ClearSize();
                 }
 
-                LetSelectSizePrefMngr.getInstance(mCtx).selectSize(sizes.getId(),sizes.getSizeName());
-                Intent i = new Intent(mCtx,SelectDesignCategory.class);
-                i.putExtra("size_id",sizes.getId());
-                i.putExtra("user_size_name",sizes.getSizeName());
+                LetSelectSizePrefMngr.getInstance(mCtx).selectSize(sizes.getId(), sizes.getSizeName());
+                Intent i = new Intent(mCtx, SelectDesignCategory.class);
+                i.putExtra("size_id", sizes.getId());
+                i.putExtra("user_size_name", sizes.getSizeName());
                 mCtx.startActivity(i);
 
             }
@@ -72,13 +72,36 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder
         holder.sizeImage.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                DeleteDataFromServer deleteDataFromServer = new DeleteDataFromServer(mCtx);
-                deleteDataFromServer.DeleteSize(String.valueOf(sizes.getId()));
+
+                final AlertDialog.Builder alertDialog = new AlertDialog.Builder(v.getRootView().getContext())
+                .setMessage("Do you really want to delete this size")
+                        .setCancelable(false)
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        })
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                DeleteDataFromServer deleteDataFromServer = new DeleteDataFromServer(mCtx);
+                                deleteDataFromServer.DeleteSize(String.valueOf(sizes.getId()));
+                                delete(holder.getAdapterPosition());
+                                Toast.makeText(mCtx, String.valueOf(sizes.getId()), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+               final AlertDialog dialog = alertDialog.create();
+                dialog.setTitle("Delete");
+                dialog.show();
+
                 return true;
             }
         });
 
     }
+
     public void delete(int position) { //removes the row
         sizeList.remove(position);
         notifyItemRemoved(position);

@@ -26,6 +26,7 @@ import java.text.SimpleDateFormat;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
+import com.taggroup.www.darzeeco.CustomerAct.CartCustomActivity;
 import com.taggroup.www.darzeeco.R;
 
 import android.support.v4.app.Fragment;
@@ -314,7 +315,7 @@ public class CustomizedDesign extends AppCompatActivity {
                         LetSelectSizePrefMngr.getInstance(mContext).ClearSelectDaaman();
                         LetSelectSizePrefMngr.getInstance(mContext).ClearSelectDupatta();
 
-                        startActivity(new Intent(getApplicationContext(), CartActivity.class));
+                        startActivity(new Intent(getApplicationContext(), CartCustomActivity.class));
                     } else {
 
                         Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_LONG).show();

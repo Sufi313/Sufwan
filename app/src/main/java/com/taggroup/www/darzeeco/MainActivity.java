@@ -39,10 +39,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.gms.ads.MobileAds;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
-import com.taggroup.www.darzeeco.CustomerAct.CartActivity;
+import com.taggroup.www.darzeeco.CustomerAct.BuyActivity;
+import com.taggroup.www.darzeeco.CustomerAct.CartCustomActivity;
+import com.taggroup.www.darzeeco.CustomerAct.CustomCart;
 import com.taggroup.www.darzeeco.CustomerAct.FavoriteActivity;
+import com.taggroup.www.darzeeco.CustomerAct.TrackActivity;
 import com.taggroup.www.darzeeco.CustomizeAndStanderd.CategoryDesign;
 import com.taggroup.www.darzeeco.CustomizeAndStanderd.LetSelectSizePrefMngr;
 import com.taggroup.www.darzeeco.FRAGS.FragmentAll;
@@ -337,12 +339,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             drawer.closeDrawer(GravityCompat.START);
         } else if (id == R.id.favorite_activity) {
 
-            startActivity(new Intent(getApplicationContext(), FavoriteActivity.class));
+            startActivity(new Intent(getApplicationContext(), TrackActivity.class));
             drawer.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.cart_activity) {
 
-            startActivity(new Intent(getApplicationContext(), CartActivity.class));
+            startActivity(new Intent(getApplicationContext(), CartCustomActivity.class));
             drawer.closeDrawer(GravityCompat.START);
             return true;
 

@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.taggroup.www.darzeeco.CustomerAct.BuyActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thanks For Your Purchasing"
+            android:textColor="@color/color_black"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:paddingTop="50dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textBuyone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thanks For Your Purchasing"
+            android:textColor="@color/color_black"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textBuytwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thanks For Your Purchasing"
+            android:textColor="@color/color_black"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textBuythree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thanks For Your Purchasing"
+            android:textColor="@color/color_black"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/button_style"
+            android:text="Home"
+            android:id="@+id/homeButton"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
