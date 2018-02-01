@@ -3,14 +3,20 @@ package com.taggroup.www.darzeeco.CustomizeAndStanderd;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
+import android.support.transition.ChangeImageTransform;
+import android.support.transition.TransitionManager;
+import android.support.transition.TransitionSet;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.TextUtils;
+import android.transition.ChangeBounds;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -114,6 +120,10 @@ public class CategoryDesign extends AppCompatActivity {
                 AlertDialog.Builder myDialog = new AlertDialog.Builder(CategoryDesign.this);
                 View myView = getLayoutInflater().inflate(R.layout.show_chart, null);
                 myDialog.setView(myView);
+
+                ImageView chartImageView = (ImageView)myView.findViewById(R.id.chartImageView);
+
+
                 AlertDialog dialog = myDialog.create();
                 dialog.show();
             }

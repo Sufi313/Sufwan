@@ -110,6 +110,8 @@ public class CashOnDel extends AppCompatActivity {
                 params.put("contact_number", getContact);
                 params.put("amount", amount);
                 params.put("invoice_date", newDateStr);
+                params.put("pickup", "pending");
+                params.put("deliver", "pending");
 
                 //returing the response
                 return requestHandler.sendPostRequest(URL_CASH, params);
@@ -140,7 +142,7 @@ public class CashOnDel extends AppCompatActivity {
                     if (error == false) {
                         Toast.makeText(context, object.getString("message"), Toast.LENGTH_SHORT).show();
 
-                        startActivity(new Intent(CashOnDel.this,BuyActivity.class));
+                        startActivity(new Intent(CashOnDel.this,TrackActivity.class));
 
                     } else {
                         Toast.makeText(context, object.getString("message"), Toast.LENGTH_LONG).show();

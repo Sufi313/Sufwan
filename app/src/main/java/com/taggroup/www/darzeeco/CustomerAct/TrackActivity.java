@@ -54,8 +54,8 @@ public class TrackActivity extends AppCompatActivity {
                 , LinearLayoutManager.VERTICAL, false));
 
         orderList = new ArrayList<>();
-
-
+        OrderList ol = new OrderList();
+        ol.execute();
 
     }
 

@@ -80,7 +80,7 @@ public class CartCustomActivity extends AppCompatActivity {
 
             // Start with mock environment.  When ready, switch to sandbox (ENVIRONMENT_SANDBOX)
             // or live (ENVIRONMENT_PRODUCTION)
-            .environment(PayPalConfiguration.ENVIRONMENT_NO_NETWORK)
+            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
 
             .clientId("AejPzHTA5RM1P6pWbQFqJIoPswfJto150Xbsj_vmUyS1xEHETOYtokUzhZN-9adwFMu57qjvqKyueM7r");
             //access_token$sandbox$mmntb3srcpqbf22v$2ef13483a861601dc206e82f84506e4a
@@ -348,6 +348,7 @@ public class CartCustomActivity extends AppCompatActivity {
                     startActivity(new Intent(this, BuyActivity.class)
                             .putExtra("paymentDetails", paymentDetails)
                             .putExtra("paymentAmount", pkr));
+
                     Toast.makeText(this, "Thanks for your purchasing", Toast.LENGTH_SHORT).show();
 
 

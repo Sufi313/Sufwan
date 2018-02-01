@@ -41,13 +41,13 @@ public class TrackAdapter extends RecyclerView.Adapter<TrackAdapter.TrackViewHol
     @Override
     public void onBindViewHolder(TrackAdapter.TrackViewHolder holder, int position) {
             final Track track = orderList.get(position);
-            holder.orderdate.setText(track.getInvoice_date());
-            holder.totalAmount.setText(String.valueOf(track.getAmount()));
-            holder.orderstatus.setText(track.getStatus());
-            holder.pickupstatus.setText(track.getPickUp_status());
-            holder.deliverstatus.setText(track.getDeliver_status());
-            holder.shippingAddress.setText(track.getAddress()+", "+track.getShipping_address());
-            holder.invoiceNumber.setText("DCD00"+track.getId());
+            holder.orderdate.setText("Order Date: "+track.getInvoice_date());
+            holder.totalAmount.setText("Order Amount: "+String.valueOf(track.getAmount()));
+            holder.orderstatus.setText("Order Status: "+track.getStatus());
+            holder.pickupstatus.setText("PickUp: "+track.getPickUp_status());
+            holder.deliverstatus.setText("Deliver Status: "+track.getDeliver_status());
+            holder.shippingAddress.setText("Shipping Address:\n"+track.getAddress()+", "+track.getShipping_address());
+            holder.invoiceNumber.setText("Invoce Number: DCD00"+track.getId());
 
             animate(holder);
     }
