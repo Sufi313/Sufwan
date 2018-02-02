@@ -1,8 +1,10 @@
 package com.taggroup.www.darzeeco.CustomerAct;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -130,7 +132,7 @@ public class CartActivity extends AppCompatActivity{
 
 
                     //creating adapter object and setting it to recyclerview
-                    CartAdapter adapter = new CartAdapter(CartActivity.this, cartList);
+                    CartAdapter adapter = new CartAdapter(CartActivity.this, cartList,R.layout.cart_list);
                     recyclerView.setAdapter(adapter);
 
 

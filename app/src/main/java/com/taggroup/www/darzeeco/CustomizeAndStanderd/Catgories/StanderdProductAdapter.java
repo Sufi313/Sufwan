@@ -98,7 +98,7 @@ public class StanderdProductAdapter extends RecyclerView.Adapter<StanderdProduct
 
                 final Dialog dialog = new Dialog(mCtx);
                 dialog.setContentView(R.layout.show_standerd_product);
-                dialog.setTitle("Position" + position);
+                dialog.setTitle("Standerd Design: " + position);
                 dialog.setCancelable(true);
 
                 ImageView d_image = dialog.findViewById(R.id.dialog_design_image);

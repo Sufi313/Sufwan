@@ -333,6 +333,7 @@
 
 
                 <EditText
+                    android:id="@+id/bulkFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_form"
@@ -347,6 +348,7 @@
 
 
                 <EditText
+                    android:id="@+id/bulkEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_form"
@@ -362,6 +364,7 @@
 
 
                 <EditText
+                    android:id="@+id/bulkPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_form"
@@ -377,6 +380,7 @@
 
 
                 <EditText
+                    android:id="@+id/bulkSubject"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_form"
@@ -387,10 +391,11 @@
                     style="@style/text_form"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MEssage:" />
+                    android:text="Message:" />
 
 
                 <EditText
+                    android:id="@+id/bulkMessage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_form"
@@ -404,6 +409,20 @@
                     android:maxLines="10"
                     android:scrollbars="vertical"
                     />
+
+
+                <TextView
+                    android:id="@+id/bulkStitchbtn"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_style2"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
@@ -571,6 +590,7 @@
                         android:src="@drawable/icon3"/>
 
                     <ImageView
+                        android:id="@+id/messageCheck"
                         android:layout_weight="0.25"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

@@ -4,7 +4,9 @@ package com.taggroup.www.darzeeco;
 
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Telephony;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -28,6 +30,7 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -41,6 +44,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.taggroup.www.darzeeco.CustomerAct.BuyActivity;
+import com.taggroup.www.darzeeco.CustomerAct.CartActivity;
 import com.taggroup.www.darzeeco.CustomerAct.CartCustomActivity;
 import com.taggroup.www.darzeeco.CustomerAct.CustomCart;
 import com.taggroup.www.darzeeco.CustomerAct.FavoriteActivity;
@@ -209,6 +213,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         privacyText = findViewById(R.id.privacy_text);
         termsText = findViewById(R.id.term_text);
         TextView darzeetxt = findViewById(R.id.text1);
+        final TextView bulkStitch = (TextView)findViewById(R.id.bulkStitchbtn);
+        final EditText bName = (EditText)findViewById(R.id.bulkFullName);
+        final EditText bemail = (EditText)findViewById(R.id.bulkEmail);
+        final EditText bPhone = (EditText)findViewById(R.id.bulkPhone);
+        final EditText bSubject = (EditText)findViewById(R.id.bulkSubject);
+        final EditText bMessage = (EditText)findViewById(R.id.bulkMessage);
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/splash.ttf");
         darzeetxt.setTypeface(typeface);
@@ -223,6 +233,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         serviceText = findViewById(R.id.service_text);
         serviceText.setMovementMethod(LinkMovementMethod.getInstance());
 
+        ImageView CheckMessage=(ImageView)findViewById(R.id.messageCheck);
+
+        CheckMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendSMS();
+            }
+        });
+
+        bulkStitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bulkStitch.setFocusable(true);
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL, "darzee@taggroup.co");
+                email.putExtra(Intent.EXTRA_SUBJECT, bSubject.getText().toString().trim());
+                email.putExtra(Intent.EXTRA_TEXT, bName.getText().toString().trim()+"\n"+
+                        bMessage.getText().toString().trim()+"\n"+"My Contect Number: "+bPhone.getText().toString().trim()
+                +"\n My Email: "+bemail.getText().toString().trim());
+                email.setType("message/rfc822");
+                startActivity(Intent.createChooser(email, "Choose app to send mail"));
+            }
+        });
 
         emailText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -270,6 +303,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         MenuItem item = menu.findItem(R.id.action_search);
         searchView.setMenuItem(item);
 
+
         return true;
 
 
@@ -293,6 +327,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                 break;
+
+
+            case R.id.action_favorite:
+                startActivity(new Intent(getApplicationContext(), CartActivity.class));
+                return true;
+
 
         }
 
@@ -455,6 +495,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         rq.add(jsonArrayRequest);
 
+    }
+
+
+    private void sendSMS() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) // At least KitKat
+        {
+            String defaultSmsPackageName = Telephony.Sms.getDefaultSmsPackage(this); // Need to change the build to API 19
+
+            Intent sendIntent = new Intent(Intent.ACTION_SEND);
+            sendIntent.setType("text/plain");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Awesome");
+
+            if (defaultSmsPackageName != null)// Can be null in case that there is no default, then the user would be able to choose
+            // any app that support this intent.
+            {
+                sendIntent.setPackage(defaultSmsPackageName);
+            }
+            startActivity(sendIntent);
+
+        }
+        else // For early versions, do what worked for you before.
+        {
+            Intent smsIntent = new Intent(android.content.Intent.ACTION_VIEW);
+            smsIntent.setType("vnd.android-dir/mms-sms");
+            smsIntent.putExtra("address","03145024989");
+            smsIntent.putExtra("sms_body","Awesome");
+            startActivity(smsIntent);
+        }
     }
 
 

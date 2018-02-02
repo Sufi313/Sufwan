@@ -27,14 +27,14 @@
             android:title="Trousers" />
 
         <item
-            android:id="@+id/favorite_activity"
-            android:icon="@drawable/ic_favorite_black_24dp"
-            android:title="My Favorite" />
-
-        <item
             android:id="@+id/cart_activity"
             android:icon="@drawable/ic_add_shopping_cart_black_24dp"
             android:title="My Cart" />
+
+        <item
+            android:id="@+id/favorite_activity"
+            android:icon="@drawable/ic_route"
+            android:title="Track Order" />
 
     </group>
 

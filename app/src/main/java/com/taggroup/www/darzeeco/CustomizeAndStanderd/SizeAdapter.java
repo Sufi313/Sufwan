@@ -63,6 +63,7 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder
 
                 LetSelectSizePrefMngr.getInstance(mCtx).selectSize(sizes.getId(), sizes.getSizeName());
                 Intent i = new Intent(mCtx, SelectDesignCategory.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 i.putExtra("size_id", sizes.getId());
                 i.putExtra("user_size_name", sizes.getSizeName());
                 mCtx.startActivity(i);
@@ -125,14 +126,6 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.SizeViewHolder
 
             nameSize = itemView.findViewById(R.id.size_name);
             sizeImage = itemView.findViewById(R.id.image_size);
-//            sizeImage.setOnLongClickListener(new View.OnLongClickListener() {
-//                @Override
-//                public boolean onLongClick(View v) {
-//                    Toast.makeText(mCtx, "Are you show you want to delete this size", Toast.LENGTH_SHORT).show();
-//                    delete(getAdapterPosition());
-//                    return true;
-//                }
-//            });
         }
     }
 

@@ -56,7 +56,7 @@ public class ViewPagerAdpterMain extends PagerAdapter {
         //imageView.setImageResource(images[position]);
 
         imageLoader = CustomeVolleyRequest.getInstance(context).getImageLoader();
-        imageLoader.get(utils.getSliderImageUrl(), ImageLoader.getImageListener(imageView, R.mipmap.ic_launcher, android.R.drawable.ic_dialog_alert));
+        imageLoader.get(utils.getSliderImageUrl(), ImageLoader.getImageListener(imageView, R.drawable.checkout, android.R.drawable.ic_dialog_alert));
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override

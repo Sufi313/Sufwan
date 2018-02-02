@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.taggroup.www.darzeeco.R;
+import com.taggroup.www.darzeeco.Utils.DeleteCustomCart;
 
 import java.util.List;
 
@@ -35,13 +37,28 @@ public class CustomCartAdapter extends RecyclerView.Adapter<CustomCartAdapter.Cu
     }
 
     @Override
-    public void onBindViewHolder(CustomCartAdapter.CustomCartViewHolder holder, int position) {
+    public void onBindViewHolder(final CustomCartAdapter.CustomCartViewHolder holder, final int position) {
         final CustomCart customCart = customCartList.get(position);
 
         holder.type.setText(customCart.getDesign_Type());
         holder.price.setText(String.valueOf(customCart.getOrder_amount()));
         holder.size.setText(String.valueOf(customCart.getSize_id()));
+        holder.remove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DeleteCustomCart deleteCustomCart = new DeleteCustomCart(mCtx);
+                deleteCustomCart.DeleteItem(String.valueOf(customCart.getId()));
+                delete(holder.getAdapterPosition());
+            }
+        });
 
+    }
+
+
+    public void delete(int position) { //removes the row
+        customCartList.remove(position);
+        notifyItemRemoved(position);
+        notifyDataSetChanged();
     }
 
 
@@ -52,10 +69,11 @@ public class CustomCartAdapter extends RecyclerView.Adapter<CustomCartAdapter.Cu
 
     public class CustomCartViewHolder extends RecyclerView.ViewHolder {
         TextView type, price, size;
+        Button remove;
 
         public CustomCartViewHolder(View itemView) {
             super(itemView);
-
+            remove= (Button)itemView.findViewById(R.id.removeCart);
             type = (TextView)itemView.findViewById(R.id.customCartDesc);
             price = (TextView)itemView.findViewById(R.id.customCartPrice);
             size = (TextView)itemView.findViewById(R.id.customCartSize);
